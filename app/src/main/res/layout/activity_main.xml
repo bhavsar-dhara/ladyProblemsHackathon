@@ -14,8 +14,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Contribute to your healthy and confident life style one selfie at a time, because expressions tell better stories than words!!!"
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="24sp"
         android:textStyle="normal|italic"
-        android:textAlignment="center"
         android:fontFamily="cursive" />
 
     <Button
