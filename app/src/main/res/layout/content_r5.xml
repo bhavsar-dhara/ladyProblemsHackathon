@@ -21,7 +21,8 @@
         android:layout_alignStart="@+id/button15"
         android:layout_marginTop="20dp"
         android:id="@+id/button17"
-        android:layout_alignEnd="@+id/button15" />
+        android:layout_alignEnd="@+id/button15"
+        android:onClick="flow"/>
 
     <TextView
         android:text="Next Menstrual Flow??"
@@ -32,8 +33,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="24dp"
-        android:onClick="flow"/>
+        android:layout_marginStart="24dp" />
 
     <Button
         android:text="Stay same"
@@ -49,9 +49,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/button15"
-        android:onClick="flow"
         android:layout_above="@+id/button16"
         android:layout_alignStart="@+id/textView7"
-        android:layout_marginBottom="15dp" />
+        android:layout_marginBottom="15dp"
+        android:onClick="flow"/>
 
 </RelativeLayout>

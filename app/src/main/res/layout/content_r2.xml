@@ -20,7 +20,8 @@
         android:layout_below="@+id/button7"
         android:layout_alignStart="@+id/button7"
         android:layout_marginTop="51dp"
-        android:id="@+id/button8" />
+        android:id="@+id/button8"
+        android:onClick="leak"/>
 
     <TextView
         android:text="Leak?"
@@ -30,8 +31,7 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:layout_marginTop="110dp"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/button7"
-        android:onClick="leak"/>
+        android:layout_alignStart="@+id/button7" />
 
     <Button
         android:text="Yes"
