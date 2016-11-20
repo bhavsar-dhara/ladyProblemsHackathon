@@ -13,11 +13,13 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Contribute to your healthy and confident life style one selfie at a time, because expressions tell better stories than words!!!"
+        android:text="Contribute to your healthy and confident life style one selfie at a time, because expressions tell better stories than words!"
         android:textAppearance="@style/TextAppearance.AppCompat"
-        android:textSize="24sp"
-        android:textStyle="normal|italic"
-        android:fontFamily="cursive" />
+        android:id="@+id/textView12"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="normal|italic" />
 
     <Button
         android:text="Tampax Algo"
@@ -25,8 +27,44 @@
         android:layout_height="wrap_content"
         android:id="@+id/button14"
         android:onClick="startTampaxAlgo"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="173dp" />
+        android:layout_marginStart="36dp"
+        android:layout_below="@+id/textView12"
+        android:layout_toEndOf="@+id/image3"
+        android:layout_marginTop="25dp" />
+
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="icon"
+        android:layout_gravity="center"
+        android:layout_marginStart="31dp"
+        android:src="@drawable/eye_web"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/button14" />
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="icon"
+        android:layout_gravity="center"
+        android:src="@drawable/cam_web"
+        android:layout_marginTop="61dp"
+        android:layout_below="@+id/image2"
+        android:layout_toStartOf="@+id/image2"
+        android:layout_marginEnd="28dp" />
+
+    <ImageView
+        android:id="@+id/image3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="icon"
+        android:layout_gravity="center"
+        android:layout_marginStart="32dp"
+        android:src="@drawable/user_web"
+        android:layout_marginTop="11dp"
+        android:layout_alignTop="@+id/image2"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
