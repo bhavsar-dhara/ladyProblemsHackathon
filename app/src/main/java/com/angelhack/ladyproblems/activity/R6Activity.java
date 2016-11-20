@@ -27,25 +27,25 @@ public class R6Activity extends AppCompatActivity {
 
     public void sleep(View view){
         finalResult.getInstance().setActivityLevel(new activityLevel(ac_sleeping));
-        Intent intent = new Intent(this, R7Activity.class);
+        Intent intent = new Intent(this, FaceEmoDetectActivity.class);
         startActivity(intent);
     }
 
     public void low(View view){
         finalResult.getInstance().setActivityLevel(new activityLevel(ac_low_resting));
-        Intent intent = new Intent(this, R7Activity.class);
+        Intent intent = new Intent(this, FaceEmoDetectActivity.class);
         startActivity(intent);
     }
 
     public void mod(View view){
         finalResult.getInstance().setActivityLevel(new activityLevel(ac_moderate_sitting));
-        Intent intent = new Intent(this, R7Activity.class);
+        Intent intent = new Intent(this, FaceEmoDetectActivity.class);
         startActivity(intent);
     }
 
     public void high(View view){
         finalResult.getInstance().setActivityLevel(new activityLevel(ac_high_exercise));
-        Intent intent = new Intent(this, R7Activity.class);
+        Intent intent = new Intent(this, FaceEmoDetectActivity.class);
         startActivity(intent);
     }
 

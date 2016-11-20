@@ -11,6 +11,7 @@ import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
@@ -25,6 +26,8 @@ import com.affectiva.android.affdex.sdk.detector.CameraDetector;
 import com.affectiva.android.affdex.sdk.detector.Detector;
 import com.affectiva.android.affdex.sdk.detector.Face;
 import com.angelhack.ladyproblems.R;
+import com.angelhack.ladyproblems.dataModel.emotion;
+import com.angelhack.ladyproblems.dataModel.finalResult;
 
 import java.util.List;
 
@@ -41,6 +44,7 @@ public class CamDetectActivity
     private TextView smileTextView;
     private TextView ageTextView;
     private TextView ethnicityTextView;
+    private TextView emotionTextView;
     private ToggleButton toggleButton;
     private Button captureButton;
 
@@ -55,6 +59,9 @@ public class CamDetectActivity
 
     private CameraDetector detector;
 
+    private String emotions = "";
+    private String age = "";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -67,6 +74,7 @@ public class CamDetectActivity
         smileTextView = (TextView) findViewById(R.id.smile_textview);
         ageTextView = (TextView) findViewById(R.id.age_textview);
         ethnicityTextView = (TextView) findViewById(R.id.ethnicity_textview);
+        emotionTextView = (TextView) findViewById(R.id.emotion_textview);
 
         toggleButton = (ToggleButton) findViewById(R.id.front_back_toggle_button);
         toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -79,7 +87,6 @@ public class CamDetectActivity
             }
         });
 
-        // TODO
         captureButton = (Button) findViewById(R.id.capture_button);
         captureButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -88,6 +95,9 @@ public class CamDetectActivity
                     isSDKStarted = false;
                     stopDetector();
                     captureButton.setText("Start Camera");
+                    saveDataCaptured();
+                    startActivity(new Intent(getBaseContext(), R7Activity.class));
+                    finish();
                 } else {
                     isSDKStarted = true;
                     startDetector();
@@ -195,6 +205,7 @@ public class CamDetectActivity
             smileTextView.setText("NO FACE");
             ageTextView.setText("");
             ethnicityTextView.setText("");
+            emotionTextView.setText("");
         } else {
             Face face = list.get(0);
             float joy = face.emotions.getJoy();
@@ -205,30 +216,64 @@ public class CamDetectActivity
             float surprise = face.emotions.getSurprise();
             float sadness = face.emotions.getSadness();
 
+            int tag = 0;
+            if (joy > 10.0) {
+                emotions = emotion.emotions.e_joy.getText();
+                tag = emotion.emotions.e_joy.getValue();
+            } else if (anger > 10.0) {
+                emotions = emotion.emotions.e_anger.getText();
+                tag = emotion.emotions.e_anger.getValue();
+            } else if (disgust > 10.0) {
+                emotions = emotion.emotions.e_disgust.getText();
+                tag = emotion.emotions.e_disgust.getValue();
+            } else if (contempt > 10.0) {
+                emotions = emotion.emotions.e_contempt.getText();
+                tag = emotion.emotions.e_contempt.getValue();
+            } else if (fear > 10.0) {
+                emotions = emotion.emotions.e_fear.getText();
+                tag = emotion.emotions.e_fear.getValue();
+            } else if (surprise > 10.0) {
+                emotions = emotion.emotions.e_surprise.getText();
+                tag = emotion.emotions.e_surprise.getValue();
+            } else if (sadness > 10.0) {
+                emotions = emotion.emotions.e_sadness.getText();
+                tag = emotion.emotions.e_sadness.getValue();
+            }
+            emotionTextView.setText(emotions);
+            emotionTextView.setTag(tag);
+
             smileTextView.setText(String.format("SMILE\n%.2f",face.expressions.getSmile()));
             switch (face.appearance.getAge()) {
                 case AGE_UNKNOWN:
+                    age = "";
                     ageTextView.setText("");
                     break;
                 case AGE_UNDER_18:
+                    age = getString(R.string.age_under_18);
                     ageTextView.setText(R.string.age_under_18);
                     break;
                 case AGE_18_24:
+                    age = getString(R.string.age_18_24);
                     ageTextView.setText(R.string.age_18_24);
                     break;
                 case AGE_25_34:
+                    age = getString(R.string.age_25_34);
                     ageTextView.setText(R.string.age_25_34);
                     break;
                 case AGE_35_44:
+                    age = getString(R.string.age_35_44);
                     ageTextView.setText(R.string.age_35_44);
                     break;
                 case AGE_45_54:
+                    age = getString(R.string.age_45_54);
                     ageTextView.setText(R.string.age_45_54);
                     break;
                 case AGE_55_64:
+                    age = getString(R.string.age_55_64);
                     ageTextView.setText(R.string.age_55_64);
                     break;
                 case AGE_65_PLUS:
+                    age = getString(R.string.age_over_64);
                     ageTextView.setText(R.string.age_over_64);
                     break;
             }
@@ -315,5 +360,30 @@ public class CamDetectActivity
 
     private void switchCamera(CameraDetector.CameraType type) {
         detector.setCameraType(type);
+    }
+
+    private void saveDataCaptured() {
+        finalResult.getInstance().setAge(age);
+        if (emotions != null) {
+            if(emotions.equals(emotion.emotions.e_anger.getText())) {
+                finalResult.getInstance().setEmotion(new emotion(emotion.emotions.e_anger));
+            } else if(emotions.equals(emotion.emotions.e_disgust.getText())) {
+                finalResult.getInstance().setEmotion(new emotion(emotion.emotions.e_disgust));
+            } else if(emotions.equals(emotion.emotions.e_contempt.getText())) {
+                finalResult.getInstance().setEmotion(new emotion(emotion.emotions.e_contempt));
+            } else if(emotions.equals(emotion.emotions.e_surprise.getText())) {
+                finalResult.getInstance().setEmotion(new emotion(emotion.emotions.e_surprise));
+            } else if(emotions.equals(emotion.emotions.e_sadness.getText())) {
+                finalResult.getInstance().setEmotion(new emotion(emotion.emotions.e_sadness));
+            } else if(emotions.equals(emotion.emotions.e_fear.getText())) {
+                finalResult.getInstance().setEmotion(new emotion(emotion.emotions.e_fear));
+            } else if(emotions.equals(emotion.emotions.e_joy.getText())) {
+                finalResult.getInstance().setEmotion(new emotion(emotion.emotions.e_joy));
+            } else {
+                Log.e(TAG, "Oops something went wrong");
+            }
+        } else {
+            Log.e(TAG, "Got null value of emotion");
+        }
     }
 }

@@ -40,7 +40,7 @@
     <string name="leak">Did you experience a leak while wearing the tampon?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
-    <string name="any_discomfort">Now remove the tampon.\nDid you experience any discomfort during removal??</string>
+    <string name="any_discomfort">Now remove the tampon.\nDid you experience any discomfort during removal?</string>
     <string name="another_tampon">Will you be inserting another tampon now?</string>
     <string name="next_menstrual_flow">During the next few hours, do you expect your menstrual flow to:</string>
     <string name="decrease">Decrease</string>
@@ -62,4 +62,6 @@
     <string name="super_plus">Super Plus</string>
     <string name="ultra">Ultra</string>
     <string name="end">End</string>
+    <string name="please_take_a_picture_of_yours_and_record_your_emotions_right_now">Please take a picture of yours to record your emotions right now</string>
+    <string name="title_activity_result_summary">ResultSummaryActivity</string>
 </resources>

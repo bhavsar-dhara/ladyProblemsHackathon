@@ -102,6 +102,7 @@
             android:layout_alignParentEnd="true"
             android:layout_below="@+id/radioButton5"
             android:layout_marginTop="23dp"
+            android:layout_marginBottom="23dp"
             android:onClick="done"
             android:text="@string/end"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />

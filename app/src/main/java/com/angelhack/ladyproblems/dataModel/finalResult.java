@@ -25,6 +25,7 @@ public class finalResult {
     private hoursOfInsertion hoursOfInsertion;
     private leak leak;
     private letStart letStart;
+    private String age;
 
     public com.angelhack.ladyproblems.dataModel.absorbency getAbsorbency() {
         return absorbency;
@@ -96,5 +97,13 @@ public class finalResult {
 
     public void setLetStart(com.angelhack.ladyproblems.dataModel.letStart letStart) {
         this.letStart = letStart;
+    }
+
+    public String getAge() {
+        return age;
+    }
+
+    public void setAge(String age) {
+        this.age = age;
     }
 }
