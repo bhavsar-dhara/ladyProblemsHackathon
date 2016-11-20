@@ -25,6 +25,7 @@ import com.affectiva.android.affdex.sdk.detector.CameraDetector;
 import com.affectiva.android.affdex.sdk.detector.Detector;
 import com.affectiva.android.affdex.sdk.detector.Face;
 import com.angelhack.ladyproblems.R;
+import com.angelhack.ladyproblems.dataModel.emotion;
 
 import java.util.List;
 
@@ -41,6 +42,7 @@ public class CamDetectActivity
     private TextView smileTextView;
     private TextView ageTextView;
     private TextView ethnicityTextView;
+    private TextView emotionTextView;
     private ToggleButton toggleButton;
     private Button captureButton;
 
@@ -67,6 +69,7 @@ public class CamDetectActivity
         smileTextView = (TextView) findViewById(R.id.smile_textview);
         ageTextView = (TextView) findViewById(R.id.age_textview);
         ethnicityTextView = (TextView) findViewById(R.id.ethnicity_textview);
+        emotionTextView = (TextView) findViewById(R.id.emotion_textview);
 
         toggleButton = (ToggleButton) findViewById(R.id.front_back_toggle_button);
         toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -195,6 +198,7 @@ public class CamDetectActivity
             smileTextView.setText("NO FACE");
             ageTextView.setText("");
             ethnicityTextView.setText("");
+            emotionTextView.setText("");
         } else {
             Face face = list.get(0);
             float joy = face.emotions.getJoy();
@@ -204,6 +208,24 @@ public class CamDetectActivity
             float fear = face.emotions.getFear();
             float surprise = face.emotions.getSurprise();
             float sadness = face.emotions.getSadness();
+
+            String emotions = "";
+            if (joy > 10.0) {
+                emotions = emotion.emotions.e_joy.getText();
+            } else if (anger > 10.0) {
+                emotions = emotion.emotions.e_anger.getText();
+            } else if (disgust > 10.0) {
+                emotions = emotion.emotions.e_disgust.getText();
+            } else if (contempt > 10.0) {
+                emotions = emotion.emotions.e_contempt.getText();
+            } else if (fear > 10.0) {
+                emotions = emotion.emotions.e_fear.getText();
+            } else if (surprise > 10.0) {
+                emotions = emotion.emotions.e_surprise.getText();
+            } else if (sadness > 10.0) {
+                emotions = emotion.emotions.e_sadness.getText();
+            }
+            emotionTextView.setText(emotions);
 
             smileTextView.setText(String.format("SMILE\n%.2f",face.expressions.getSmile()));
             switch (face.appearance.getAge()) {
