@@ -1,10 +1,10 @@
-# Tampax Algorithm
+# TampaX Check
+
 This is a project presented as a part of Lady Problems Hackathon - Boston 2016
 
 Pitch:
-
 Contribute to your healthy and confident life style one selfie at a time,
-because expressions tell better stories than words! :D
+because expressions tell better stories than words!
 
 Why? 
 * Do you hate filling up long and tadius forms?
