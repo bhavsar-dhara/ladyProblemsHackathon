@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import com.angelhack.ladyproblems.R;
 
@@ -16,7 +17,7 @@ public class R2Activity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
     }
-        public void leak(){
+        public void leak(View view){
             Intent intent = new Intent(this, R3Activity.class);
             startActivity(intent);
         }

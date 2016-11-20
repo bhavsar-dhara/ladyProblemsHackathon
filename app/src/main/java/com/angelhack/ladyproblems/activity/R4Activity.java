@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 
 import com.angelhack.ladyproblems.R;
 
@@ -17,7 +18,7 @@ public class R4Activity extends AppCompatActivity {
         setSupportActionBar(toolbar);
     }
 
-    public void anotherTampon(){
+    public void anotherTampon(View view){
         Intent intent = new Intent(this, R5Activity.class);
         startActivity(intent);
     }

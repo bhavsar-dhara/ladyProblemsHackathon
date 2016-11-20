@@ -20,7 +20,7 @@ public class R8Activity extends AppCompatActivity {
         setSupportActionBar(toolbar);
     }
 
-    public void done(){
+    public void done(View view){
         //Intent intent = new Intent(this, );
     }
 
