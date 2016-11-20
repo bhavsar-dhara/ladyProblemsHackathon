@@ -1,5 +1,6 @@
 package com.angelhack.ladyproblems;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -15,6 +16,10 @@ public class R8Activity extends AppCompatActivity {
         setContentView(R.layout.activity_r8);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+    }
+
+    public void done(){
+        //Intent intent = new Intent(this, );
     }
 
 }

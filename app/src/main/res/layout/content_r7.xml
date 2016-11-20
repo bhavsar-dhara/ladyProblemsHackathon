@@ -30,5 +30,6 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="114dp"
         android:layout_marginTop="56dp"
-        android:id="@+id/button13" />
+        android:id="@+id/button13"
+        android:onClick="result"/>
 </RelativeLayout>

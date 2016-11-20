@@ -13,13 +13,80 @@
     tools:context="com.angelhack.ladyproblems.R8Activity"
     tools:showIn="@layout/activity_r8">
 
+    <RadioButton
+        android:text="Lite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView10"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="95dp"
+        android:id="@+id/radioButton" />
+
+    <RadioButton
+        android:text="Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton"
+        android:layout_alignStart="@+id/radioButton"
+        android:layout_marginTop="33dp"
+        android:id="@+id/radioButton2" />
+
+    <RadioButton
+        android:text="Super"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton2"
+        android:layout_alignStart="@+id/radioButton2"
+        android:layout_marginTop="30dp"
+        android:id="@+id/radioButton3" />
+
+    <RadioButton
+        android:text="Super Plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton3"
+        android:layout_alignStart="@+id/radioButton3"
+        android:layout_marginTop="30dp"
+        android:id="@+id/radioButton4" />
+
+    <RadioButton
+        android:text="Ultra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/radioButton4"
+        android:layout_alignStart="@+id/radioButton4"
+        android:layout_marginTop="18dp"
+        android:id="@+id/radioButton5" />
+
     <TextView
         android:text="Our suggestion ..."
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="48dp"
         android:id="@+id/textView10"
         android:textAppearance="@style/TextAppearance.AppCompat.Notification.Title"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Which tampon you chose?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView10"
+        android:layout_alignStart="@+id/radioButton"
+        android:layout_marginTop="33dp"
+        android:id="@+id/textView11"
+        android:textStyle="normal|italic" />
+
+    <Button
+        android:text="End"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/textView10"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="11dp"
+        android:id="@+id/button22"
+        android:onClick="done"/>
 </RelativeLayout>

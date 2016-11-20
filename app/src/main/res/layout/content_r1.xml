@@ -32,7 +32,8 @@
         android:layout_below="@+id/textView3"
         android:layout_alignStart="@+id/textView3"
         android:layout_marginTop="40dp"
-        android:id="@+id/button5" />
+        android:id="@+id/button5"
+        android:onClick="lessThan3"/>
 
     <Button
         android:text=">3"
@@ -41,5 +42,6 @@
         android:layout_below="@+id/button5"
         android:layout_alignEnd="@+id/button5"
         android:layout_marginTop="53dp"
-        android:id="@+id/button6" />
+        android:id="@+id/button6"
+        android:onClick="lessThan3"/>
 </RelativeLayout>

@@ -25,39 +25,44 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textStyle="normal|italic" />
 
-    <RadioButton
-        android:text="Sleeping(upto 8 hours)"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView8"
-        android:layout_alignStart="@+id/textView8"
-        android:layout_marginTop="53dp"
-        android:id="@+id/radioButton4" />
-
-    <RadioButton
-        android:text="Moderate or Sitting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/radioButton5"
-        android:layout_alignStart="@+id/radioButton5"
-        android:layout_marginTop="23dp"
-        android:id="@+id/radioButton6" />
-
-    <RadioButton
+    <Button
         android:text="Low or Resting"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:id="@+id/radioButton5"
-        android:layout_below="@+id/radioButton4"
-        android:layout_alignStart="@+id/radioButton4" />
+        android:layout_below="@+id/button18"
+        android:layout_alignStart="@+id/textView8"
+        android:layout_marginTop="29dp"
+        android:id="@+id/button19"
+        android:onClick="activityLevel"/>
 
-    <RadioButton
+    <Button
         android:text="High or Exercising"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:id="@+id/radioButton7"
-        android:layout_below="@+id/radioButton6"
-        android:layout_alignStart="@+id/radioButton6" />
+        android:layout_below="@+id/button20"
+        android:layout_alignStart="@+id/button18"
+        android:layout_marginTop="25dp"
+        android:id="@+id/button21"
+        android:onClick="activityLevel"/>
+
+    <Button
+        android:text="Sleeping(Upto 8 hours)"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:id="@+id/button18"
+        android:layout_below="@+id/textView8"
+        android:layout_alignStart="@+id/button19"
+        android:onClick="activityLevel"/>
+
+    <Button
+        android:text="Moderate or sitting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:id="@+id/button20"
+        android:layout_below="@+id/button19"
+        android:layout_alignStart="@+id/button19"
+        android:onClick="activityLevel"/>
+
 </RelativeLayout>

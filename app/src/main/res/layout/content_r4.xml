@@ -31,7 +31,8 @@
         android:layout_below="@+id/textView6"
         android:layout_alignStart="@+id/textView6"
         android:layout_marginTop="48dp"
-        android:id="@+id/button11" />
+        android:id="@+id/button11"
+        android:onClick="anotherTampon"/>
 
     <Button
         android:text="No"
@@ -40,5 +41,6 @@
         android:layout_alignTop="@+id/button11"
         android:layout_toEndOf="@+id/textView6"
         android:layout_marginStart="21dp"
-        android:id="@+id/button12" />
+        android:id="@+id/button12"
+        android:onClick="anotherTampon"/>
 </RelativeLayout>
