@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="@drawable/back_web"
-    tools:context="com.angelhack.ladyproblems.activity.R1Activity">
+    tools:context="com.angelhack.ladyproblems.activity.R1Activity"
+    android:background="@drawable/back_web">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
