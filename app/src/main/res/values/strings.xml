@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">TampX &#x2713;</string>
+    <string name="app_name">TampaX &#x2713;</string>
     <string name="title_activity_face_emo_detect">FaceEmoDetectActivity</string>
     <string name="take_a_picture">Take a picture</string>
     <string name="upload_a_picture">Upload a picture</string>
@@ -13,7 +13,7 @@
     <string name="title_activity_r5">Question 5</string>
     <string name="title_activity_r6">Question 6</string>
     <string name="title_activity_r7">Question 7</string>
-    <string name="title_activity_r8">Question 8</string>
+    <string name="title_activity_r8">Insertion Feedback</string>
     <string name="front_cam_on">Front Cam On</string>
     <string name="back_cam_on">Back Cam On</string>
 

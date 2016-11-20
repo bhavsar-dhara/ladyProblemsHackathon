@@ -10,86 +10,29 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.angelhack.ladyproblems.activity.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Contribute to your healthy and confident life style one selfie at a time, because expressions tell better stories than words!"
-        android:textAppearance="@style/TextAppearance.AppCompat"
-        android:id="@+id/textView12"
-        android:textSize="18sp"
-        android:textAlignment="center"
-        android:fontFamily="sans-serif-condensed"
-        android:textStyle="normal|italic" />
-
-    <Button
-        android:text="Tampax Algo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button14"
-        android:onClick="startTampaxAlgo"
-        android:layout_marginStart="36dp"
-        android:layout_below="@+id/textView12"
-        android:layout_toEndOf="@+id/image3"
-        android:layout_marginTop="25dp" />
-
-    <TextView
-        android:text="Ease Of Use"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView17"
-        android:textStyle="normal|bold"
-        android:textSize="12sp"
-        android:textAlignment="textStart"
-        android:layout_below="@+id/image1"
-        android:layout_alignStart="@+id/image1" />
-
-    <ImageView
-        android:id="@+id/image2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:contentDescription="icon"
-        android:layout_gravity="center"
-        android:src="@drawable/eye_web"
-        android:layout_below="@+id/button14"
-        android:layout_toEndOf="@+id/button14"
-        android:layout_marginTop="91dp" />
-
     <ImageView
         android:id="@+id/image3"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:contentDescription="icon"
         android:layout_gravity="center"
-        android:layout_marginStart="27dp"
         android:src="@drawable/user_web"
-        android:layout_above="@+id/textView15"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/textView14"
+        android:layout_toStartOf="@+id/textView14"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="20dp" />
 
     <TextView
-        android:text="Product Features"
+        android:text="&#169; Copyright: Team m00dSwings - Lady Problems Hackathon, Boston"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView14"
-        android:fontFamily="cursive"
-        android:textStyle="normal|bold|italic"
-        android:textSize="18sp"
-        android:layout_below="@+id/button14"
-        android:layout_alignEnd="@+id/button14"
-        android:layout_marginTop="31dp" />
-
-    <TextView
-        android:text="Emotion Recognition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:id="@+id/textView15"
+        android:layout_marginBottom="34dp"
+        android:id="@+id/textView18"
         android:textSize="10sp"
-        android:fontFamily="sans-serif"
-        android:textStyle="normal|bold"
+        android:textStyle="normal|bold|italic"
         android:textAlignment="textStart"
-        android:layout_below="@+id/image2"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="13dp" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:text="Accessibility"
@@ -97,9 +40,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView16"
         android:textStyle="normal|bold"
-        android:textAlignment="textStart"
-        android:layout_above="@+id/image1"
-        android:layout_alignStart="@+id/image2" />
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:layout_below="@+id/image2"
+        android:layout_alignEnd="@+id/textView18" />
 
     <ImageView
         android:id="@+id/image1"
@@ -108,20 +52,81 @@
         android:contentDescription="icon"
         android:layout_gravity="center"
         android:src="@drawable/cam_web"
-        android:layout_marginTop="27dp"
         android:layout_below="@+id/textView15"
         android:layout_centerHorizontal="true" />
 
+    <ImageView
+        android:id="@+id/image2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="icon"
+        android:layout_gravity="center"
+        android:src="@drawable/eye_web"
+        android:layout_marginStart="11dp"
+        android:layout_alignTop="@+id/image3"
+        android:layout_alignStart="@+id/textView16" />
+
     <TextView
-        android:text="@Copyright: m00dSwings"
+        android:text="Emotion \n Recognition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="22dp"
-        android:id="@+id/textView18"
-        android:textSize="10sp"
+        android:id="@+id/textView15"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal|bold"
+        android:textAlignment="center"
+        android:layout_below="@+id/image3"
+        android:layout_toStartOf="@+id/textView14" />
+
+    <TextView
+        android:text="Product Features"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView14"
+        android:layout_marginTop="31dp"
+        android:fontFamily="sans-serif"
+        android:typeface="sans"
+        android:lineSpacingExtra="14sp"
+        android:textSize="18sp"
         android:textStyle="normal|bold|italic"
-        android:textAlignment="textStart"
-        android:layout_alignParentBottom="true"
-        android:layout_toStartOf="@+id/textView16" />
+        android:textAllCaps="false"
+        android:layout_below="@+id/button14"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="Ease Of Use"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView17"
+        android:textStyle="normal|bold"
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:layout_below="@+id/image1"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text='Contribute to your healthy and confident life style one selfie at a time using "TampaX Check", cause expressions tell better stories than words!'
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:id="@+id/textView12"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:fontFamily="sans-serif-condensed"
+        android:textStyle="normal|bold|italic"
+        android:layout_marginTop="24dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="Give TampaX &#x2713; Feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button14"
+        android:onClick="startTampaxAlgo"
+        android:layout_marginTop="25dp"
+        android:textAllCaps="false"
+        android:layout_below="@+id/textView12"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
