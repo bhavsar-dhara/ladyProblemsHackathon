@@ -25,6 +25,10 @@
         <activity
             android:name=".FaceEmoDetectActivity"
             android:label="@string/title_activity_face_emo_detect"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".CamDetectActivity"
+            android:label="@string/title_activity_cam_detect"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
