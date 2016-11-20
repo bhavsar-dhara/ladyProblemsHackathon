@@ -9,6 +9,12 @@ import android.util.Log;
 public class leak {
     private static final String TAG = leak.class.getSimpleName();
 
+    private static leakage LEAKAGE;
+
+    public leak(leakage leakage){
+        LEAKAGE = leakage;
+    }
+
     public enum leakage {
         l_yes(0),
         l_no(1);

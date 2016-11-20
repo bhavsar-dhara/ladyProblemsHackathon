@@ -43,5 +43,5 @@
         android:layout_alignEnd="@+id/button5"
         android:layout_marginTop="53dp"
         android:id="@+id/button6"
-        android:onClick="lessThan3"/>
+        android:onClick="greaterThan3"/>
 </RelativeLayout>

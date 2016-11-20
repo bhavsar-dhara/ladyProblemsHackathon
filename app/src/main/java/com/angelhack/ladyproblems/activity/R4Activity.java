@@ -5,10 +5,16 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
-
 import com.angelhack.ladyproblems.R;
+import com.angelhack.ladyproblems.dataModel.anotherTampon;
+import com.angelhack.ladyproblems.dataModel.finalResult;
+
+import static com.angelhack.ladyproblems.dataModel.anotherTampon.tampon.t_no;
+import static com.angelhack.ladyproblems.dataModel.anotherTampon.tampon.t_yes;
 
 public class R4Activity extends AppCompatActivity {
+
+    private finalResult finalResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,9 +22,18 @@ public class R4Activity extends AppCompatActivity {
         setContentView(R.layout.activity_r4);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        finalResult = finalResult.getInstance();
     }
 
     public void anotherTampon(View view){
+        finalResult.setAnotherTampon(new anotherTampon(t_yes));
+        Intent intent = new Intent(this, R5Activity.class);
+        startActivity(intent);
+    }
+
+    public void noTampon(View view){
+        finalResult.setAnotherTampon(new anotherTampon(t_no));
         Intent intent = new Intent(this, R5Activity.class);
         startActivity(intent);
     }

@@ -10,12 +10,18 @@ public class absorbency {
 
     private static final String TAG = absorbency.class.getSimpleName();
 
+    private static absorbencies ABSORBENCY_OPTION;
+
+    public absorbency(absorbencies absorbencies) {
+        ABSORBENCY_OPTION = absorbencies;
+    }
+
     public enum absorbencies {
-        ab_little(0),
-        ab_regular(0),
-        ab_super(0),
-        ab_super_plus(0),
-        ab_ultra(0);
+        ab_lite(0),
+        ab_regular(1),
+        ab_super(2),
+        ab_super_plus(3),
+        ab_ultra(4);
 
 
         int value;
@@ -26,7 +32,7 @@ public class absorbency {
 
         public String getText() {
             switch (this) {
-                case ab_little:
+                case ab_lite:
                     return "Little";
                 case ab_regular:
                     return "Regular";

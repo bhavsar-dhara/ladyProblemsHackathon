@@ -10,6 +10,12 @@ public class emotion {
 
     private static final String TAG = emotion.class.getSimpleName();
 
+    private static emotions EMOTIONS;
+
+    public emotion(emotions emotions){
+        EMOTIONS = emotions;
+    }
+
     public enum emotions {
         e_anger(0),
         e_contempt(1),

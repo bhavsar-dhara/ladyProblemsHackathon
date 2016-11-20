@@ -33,7 +33,7 @@
         android:layout_alignStart="@+id/textView8"
         android:layout_marginTop="29dp"
         android:id="@+id/button19"
-        android:onClick="activityLevel"/>
+        android:onClick="low"/>
 
     <Button
         android:text="High or Exercising"
@@ -43,7 +43,7 @@
         android:layout_alignStart="@+id/button18"
         android:layout_marginTop="25dp"
         android:id="@+id/button21"
-        android:onClick="activityLevel"/>
+        android:onClick="high"/>
 
     <Button
         android:text="Sleeping(Upto 8 hours)"
@@ -53,7 +53,7 @@
         android:id="@+id/button18"
         android:layout_below="@+id/textView8"
         android:layout_alignStart="@+id/button19"
-        android:onClick="activityLevel"/>
+        android:onClick="sleep"/>
 
     <Button
         android:text="Moderate or sitting"
@@ -63,6 +63,6 @@
         android:id="@+id/button20"
         android:layout_below="@+id/button19"
         android:layout_alignStart="@+id/button19"
-        android:onClick="activityLevel"/>
+        android:onClick="mod"/>
 
 </RelativeLayout>

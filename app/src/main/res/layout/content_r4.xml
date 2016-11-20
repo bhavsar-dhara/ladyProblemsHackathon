@@ -42,5 +42,5 @@
         android:layout_toEndOf="@+id/textView6"
         android:layout_marginStart="21dp"
         android:id="@+id/button12"
-        android:onClick="anotherTampon"/>
+        android:onClick="noTampon"/>
 </RelativeLayout>

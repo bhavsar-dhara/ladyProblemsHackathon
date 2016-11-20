@@ -9,6 +9,12 @@ import android.util.Log;
 public class hoursOfInsertion {
     private static final String TAG = hoursOfInsertion.class.getSimpleName();
 
+    private static hours HOURS;
+
+    public hoursOfInsertion(hours hours){
+        HOURS = hours;
+    }
+
     public enum hours {
         h_lessThan3(0),
         h_greaterThan3(1);

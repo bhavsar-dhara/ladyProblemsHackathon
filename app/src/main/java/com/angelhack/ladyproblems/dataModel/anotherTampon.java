@@ -9,6 +9,12 @@ import android.util.Log;
 public class anotherTampon {
     private static final String TAG = anotherTampon.class.getSimpleName();
 
+    private static tampon TAMPON;
+
+    public anotherTampon(tampon tampon){
+        TAMPON = tampon;
+    }
+
     public enum tampon {
         t_yes(0),
         t_no(1);

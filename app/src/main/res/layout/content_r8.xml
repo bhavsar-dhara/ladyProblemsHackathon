@@ -21,7 +21,8 @@
         android:layout_alignParentStart="true"
         android:layout_marginStart="32dp"
         android:layout_marginTop="95dp"
-        android:id="@+id/radioButton" />
+        android:id="@+id/radioButton"
+        android:onClick="lite"/>
 
     <RadioButton
         android:text="Regular"
@@ -30,7 +31,8 @@
         android:layout_below="@+id/radioButton"
         android:layout_alignStart="@+id/radioButton"
         android:layout_marginTop="33dp"
-        android:id="@+id/radioButton2" />
+        android:id="@+id/radioButton2"
+        android:onClick="regular"/>
 
     <RadioButton
         android:text="Super"
@@ -39,7 +41,8 @@
         android:layout_below="@+id/radioButton2"
         android:layout_alignStart="@+id/radioButton2"
         android:layout_marginTop="30dp"
-        android:id="@+id/radioButton3" />
+        android:id="@+id/radioButton3"
+        android:onClick="super1"/>
 
     <RadioButton
         android:text="Super Plus"
@@ -48,7 +51,8 @@
         android:layout_below="@+id/radioButton3"
         android:layout_alignStart="@+id/radioButton3"
         android:layout_marginTop="30dp"
-        android:id="@+id/radioButton4" />
+        android:id="@+id/radioButton4"
+        android:onClick="superplus"/>
 
     <RadioButton
         android:text="Ultra"
@@ -57,7 +61,8 @@
         android:layout_below="@+id/radioButton4"
         android:layout_alignStart="@+id/radioButton4"
         android:layout_marginTop="18dp"
-        android:id="@+id/radioButton5" />
+        android:id="@+id/radioButton5"
+        android:onClick="ultra"/>
 
     <TextView
         android:text="Our suggestion ..."

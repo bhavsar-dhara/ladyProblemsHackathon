@@ -9,6 +9,12 @@ import android.util.Log;
 public class discomfort {
     private static final String TAG = discomfort.class.getSimpleName();
 
+    private static options OPTIONS;
+
+    public discomfort(options options){
+        OPTIONS = options;
+    }
+
     public enum options {
         d_yes(0),
         d_no(1);

@@ -6,9 +6,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.angelhack.ladyproblems.dataModel.discomfort;
+import com.angelhack.ladyproblems.dataModel.finalResult;
+
 import com.angelhack.ladyproblems.R;
 
+import static com.angelhack.ladyproblems.dataModel.discomfort.options.d_no;
+import static com.angelhack.ladyproblems.dataModel.discomfort.options.d_yes;
+
 public class R3Activity extends AppCompatActivity {
+
+    private finalResult finalResult;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,10 +25,20 @@ public class R3Activity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        finalResult = finalResult.getInstance();
+
     }
-        public void discomfort(View view){
-            Intent intent = new Intent(this, R4Activity.class);
-            startActivity(intent);
+
+    public void discomfort(View view) {
+        finalResult.setDiscomfort(new discomfort(d_yes));
+        Intent intent = new Intent(this, R4Activity.class);
+        startActivity(intent);
+    }
+
+    public void comfort(View view) {
+        finalResult.setDiscomfort(new discomfort(d_no));
+        Intent intent = new Intent(this, R4Activity.class);
+        startActivity(intent);
     }
 
 }

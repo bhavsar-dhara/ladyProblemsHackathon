@@ -10,11 +10,17 @@ public class activityLevel {
 
     private static final String TAG = activityLevel.class.getSimpleName();
 
+    private static activity ACTIVITY;
+
+    public activityLevel(activity activity) {
+        ACTIVITY = activity;
+    }
+
     public enum activity {
         ac_sleeping(0),
-        ac_low_resting(0),
-        ac_moderate_sitting(0),
-        ac_high_exercise(0);
+        ac_low_resting(1),
+        ac_moderate_sitting(2),
+        ac_high_exercise(3);
 
         int value;
 
