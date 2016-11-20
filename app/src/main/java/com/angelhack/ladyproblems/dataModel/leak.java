@@ -15,6 +15,10 @@ public class leak {
         LEAKAGE = leakage;
     }
 
+    public static leakage getLEAKAGE() {
+        return LEAKAGE;
+    }
+
     public enum leakage {
         l_yes(0),
         l_no(1);

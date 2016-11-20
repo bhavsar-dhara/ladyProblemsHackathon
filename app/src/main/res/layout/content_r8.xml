@@ -19,21 +19,11 @@
         tools:showIn="@layout/activity_r8">
 
         <TextView
-            android:id="@+id/textView10"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="32dp"
-            android:text="@string/our_suggestion"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
-
-        <TextView
             android:id="@+id/textView11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/textView10"
+            android:layout_alignParentTop="true"
             android:layout_marginTop="23dp"
             android:text="@string/which_tampon_you_chose"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"

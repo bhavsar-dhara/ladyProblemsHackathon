@@ -16,6 +16,10 @@ public class flow {
         FLOWS = flows;
     }
 
+    public static flows getFLOWS() {
+        return FLOWS;
+    }
+
     public enum flows {
         f_increase(0),
         f_same_as_before(1),
