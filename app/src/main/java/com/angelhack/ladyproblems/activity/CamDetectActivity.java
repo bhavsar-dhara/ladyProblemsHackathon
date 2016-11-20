@@ -136,6 +136,7 @@ public class CamDetectActivity
         detector.setDetectSmile(true);
         detector.setDetectAge(true);
         detector.setDetectEthnicity(true);
+        detector.setDetectAllEmotions(true);
         detector.setImageListener(this);
         detector.setOnCameraEventListener(this);
     }
@@ -196,6 +197,14 @@ public class CamDetectActivity
             ethnicityTextView.setText("");
         } else {
             Face face = list.get(0);
+            float joy = face.emotions.getJoy();
+            float anger = face.emotions.getAnger();
+            float disgust = face.emotions.getDisgust();
+            float contempt = face.emotions.getContempt();
+            float fear = face.emotions.getFear();
+            float surprise = face.emotions.getSurprise();
+            float sadness = face.emotions.getSadness();
+
             smileTextView.setText(String.format("SMILE\n%.2f",face.expressions.getSmile()));
             switch (face.appearance.getAge()) {
                 case AGE_UNKNOWN:
