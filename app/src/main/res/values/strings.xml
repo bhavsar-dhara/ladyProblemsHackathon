@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">TampaX &#x2713;</string>
-    <string name="title_activity_face_emo_detect">FaceEmoDetectActivity</string>
+    <string name="title_activity_face_emo_detect">Emotion Detection</string>
     <string name="take_a_picture">Take a picture</string>
     <string name="upload_a_picture">Upload a picture</string>
-    <string name="title_activity_cam_detect">CamDetectActivity</string>
-    <string name="title_activity_lets_start">LetsStart</string>
-    <string name="title_activity_let_start">LetStartActivity</string>
+    <string name="title_activity_cam_detect">Camera Panel</string>
+    <string name="title_activity_lets_start">Lets Start</string>
+    <string name="title_activity_let_start">Let Start Activity</string>
     <string name="title_activity_r1">Question 1</string>
     <string name="title_activity_r2">Question 2</string>
     <string name="title_activity_r3">Question 3</string>
