@@ -14,55 +14,58 @@
     tools:showIn="@layout/activity_r6">
 
     <TextView
-        android:text="Activity Level? "
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="63dp"
         android:id="@+id/textView8"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="42dp"
+        android:text="@string/activity_level"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textStyle="normal|italic" />
 
     <Button
-        android:text="Low or Resting"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button18"
-        android:layout_alignStart="@+id/textView8"
-        android:layout_marginTop="29dp"
-        android:id="@+id/button19"
-        android:onClick="low"/>
-
-    <Button
-        android:text="High or Exercising"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button20"
-        android:layout_alignStart="@+id/button18"
-        android:layout_marginTop="25dp"
-        android:id="@+id/button21"
-        android:onClick="high"/>
-
-    <Button
-        android:text="Sleeping(Upto 8 hours)"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
         android:id="@+id/button18"
-        android:layout_below="@+id/textView8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignStart="@+id/button19"
-        android:onClick="sleep"/>
+        android:layout_below="@+id/textView8"
+        android:layout_marginTop="42dp"
+        android:onClick="sleep"
+        android:text="@string/sleeping_upto_8_hours"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <Button
-        android:text="Moderate or sitting"
-        android:layout_width="wrap_content"
+        android:id="@+id/button19"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
+        android:layout_alignStart="@+id/textView8"
+        android:layout_below="@+id/button18"
+        android:layout_marginTop="32dp"
+        android:onClick="low"
+        android:text="@string/low_or_resting"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <Button
         android:id="@+id/button20"
-        android:layout_below="@+id/button19"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignStart="@+id/button19"
-        android:onClick="mod"/>
+        android:layout_below="@+id/button19"
+        android:layout_marginTop="32dp"
+        android:onClick="mod"
+        android:text="@string/moderate_or_sitting"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <Button
+        android:id="@+id/button21"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/button18"
+        android:layout_below="@+id/button20"
+        android:layout_marginTop="32dp"
+        android:onClick="high"
+        android:text="@string/high_or_exercising"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
 </RelativeLayout>

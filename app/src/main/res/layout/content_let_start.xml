@@ -13,46 +13,48 @@
     tools:context="com.angelhack.ladyproblems.activity.LetStartActivity"
     tools:showIn="@layout/activity_let_start">
 
-
     <TextView
-        android:text="Hey Gal, Lets get started"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="37dp"
         android:id="@+id/textView"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="@string/hey_gal_lets_get_started"
+        android:textColor="#000000"
+        android:textSize="37sp"
         android:textStyle="normal|bold|italic" />
 
     <TextView
-        android:text="Wanna remove or insert a tampon?"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_alignStart="@+id/textView"
-        android:layout_marginTop="51dp"
         android:id="@+id/textView2"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="22dp"
+        android:text="@string/wanna_remove_or_insert_a_tampon"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textStyle="normal|italic" />
 
     <Button
-        android:text="Remove"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
-        android:layout_alignStart="@+id/textView2"
-        android:layout_marginTop="47dp"
         android:id="@+id/button3"
-        android:onClick="removed"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="42dp"
+        android:onClick="removed"
+        android:text="@string/remove"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <Button
-        android:text="Insert"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/button4"
-        android:layout_below="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_alignStart="@+id/button3"
-        android:layout_marginTop="39dp"
-        android:onClick="inserted"/>
+        android:layout_below="@+id/button3"
+        android:layout_marginTop="32dp"
+        android:onClick="inserted"
+        android:text="@string/insert"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
 </RelativeLayout>

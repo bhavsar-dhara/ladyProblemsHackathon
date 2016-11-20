@@ -7,9 +7,9 @@ package com.angelhack.ladyproblems.dataModel;
 public class finalResult {
     private static final String TAG = finalResult.class.getSimpleName();
 
-    private finalResult mInstance;
+    private static finalResult mInstance;
 
-    public finalResult getInstance() {
+    public static finalResult getInstance() {
         if(mInstance == null) {
             mInstance = new finalResult();
         }

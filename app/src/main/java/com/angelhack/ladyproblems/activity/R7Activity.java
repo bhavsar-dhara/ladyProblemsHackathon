@@ -6,12 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
-import com.angelhack.ladyproblems.dataModel.absorbency;
-import com.angelhack.ladyproblems.dataModel.finalResult;
-
 import com.angelhack.ladyproblems.R;
-
-import static com.angelhack.ladyproblems.dataModel.absorbency.absorbencies.ab_little;
 
 public class R7Activity extends AppCompatActivity {
 
@@ -21,7 +16,6 @@ public class R7Activity extends AppCompatActivity {
         setContentView(R.layout.activity_r7);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
     }
 
     public void result(View view){

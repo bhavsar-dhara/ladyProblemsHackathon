@@ -14,22 +14,24 @@
     tools:showIn="@layout/activity_r7">
 
     <TextView
-        android:text="Get  the recommendation for the optimal absorbency of your next tampon...."
-        android:layout_width="wrap_content"
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="71dp"
-        android:id="@+id/textView9"
+        android:layout_marginTop="42dp"
+        android:text="@string/get_the_recommendation_for_the_optimal_absorbency_of_your_next_tampon"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textStyle="normal|italic" />
 
     <Button
-        android:text="Continue..."
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView9"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="114dp"
-        android:layout_marginTop="56dp"
         android:id="@+id/button13"
-        android:onClick="result"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView9"
+        android:layout_marginTop="56dp"
+        android:onClick="result"
+        android:text="@string/continue_"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
 </RelativeLayout>

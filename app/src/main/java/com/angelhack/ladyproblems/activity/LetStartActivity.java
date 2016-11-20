@@ -15,26 +15,22 @@ import static com.angelhack.ladyproblems.dataModel.letStart.letStartOptions.s_re
 
 public class LetStartActivity extends AppCompatActivity {
 
-    private finalResult finalResult;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_let_start);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        finalResult = finalResult.getInstance();
     }
 
     public void removed(View view) {
-        finalResult.setLetStart(new letStart(s_remove));
-        Intent intent = new Intent(this, R8Activity.class);
+        finalResult.getInstance().setLetStart(new letStart(s_remove));
+        Intent intent = new Intent(this, R1Activity.class);
         startActivity(intent);
     }
 
     public void inserted(View view) {
-        finalResult.setLetStart(new letStart(s_insert));
+        finalResult.getInstance().setLetStart(new letStart(s_insert));
         Intent intent = new Intent(this, R8Activity.class);
         startActivity(intent);
     }

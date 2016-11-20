@@ -6,10 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.angelhack.ladyproblems.R;
 import com.angelhack.ladyproblems.dataModel.activityLevel;
 import com.angelhack.ladyproblems.dataModel.finalResult;
-
-import com.angelhack.ladyproblems.R;
 
 import static com.angelhack.ladyproblems.dataModel.activityLevel.activity.ac_high_exercise;
 import static com.angelhack.ladyproblems.dataModel.activityLevel.activity.ac_low_resting;
@@ -18,38 +17,34 @@ import static com.angelhack.ladyproblems.dataModel.activityLevel.activity.ac_sle
 
 public class R6Activity extends AppCompatActivity {
 
-    private static finalResult finalResult;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_r6);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        finalResult = finalResult.getInstance();
     }
 
     public void sleep(View view){
-        finalResult.setActivityLevel(new activityLevel(ac_sleeping));
+        finalResult.getInstance().setActivityLevel(new activityLevel(ac_sleeping));
         Intent intent = new Intent(this, R7Activity.class);
         startActivity(intent);
     }
 
     public void low(View view){
-        finalResult.setActivityLevel(new activityLevel(ac_low_resting));
+        finalResult.getInstance().setActivityLevel(new activityLevel(ac_low_resting));
         Intent intent = new Intent(this, R7Activity.class);
         startActivity(intent);
     }
 
     public void mod(View view){
-        finalResult.setActivityLevel(new activityLevel(ac_moderate_sitting));
+        finalResult.getInstance().setActivityLevel(new activityLevel(ac_moderate_sitting));
         Intent intent = new Intent(this, R7Activity.class);
         startActivity(intent);
     }
 
     public void high(View view){
-        finalResult.setActivityLevel(new activityLevel(ac_high_exercise));
+        finalResult.getInstance().setActivityLevel(new activityLevel(ac_high_exercise));
         Intent intent = new Intent(this, R7Activity.class);
         startActivity(intent);
     }
