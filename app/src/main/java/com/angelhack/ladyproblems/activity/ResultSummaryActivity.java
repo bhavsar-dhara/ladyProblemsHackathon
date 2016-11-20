@@ -54,7 +54,11 @@ public class ResultSummaryActivity extends AppCompatActivity {
         smileDegree.setText(String.valueOf(finalResult.getInstance().getSmileDegree()));
 
         leakage = finalResult.getInstance().getLeak();
-        e_emotions = finalResult.getInstance().getEmotion();
+        if(finalResult.getInstance().getEmotion() != null) {
+            e_emotions = finalResult.getInstance().getEmotion();
+        } else {
+            e_emotions = new emotion(emotion.emotions.e_contempt);
+        }
         options = finalResult.getInstance().getDiscomfort();
         flow = finalResult.getInstance().getFlow();
         ac_activity = finalResult.getInstance().getActivityLevel();
@@ -73,22 +77,22 @@ public class ResultSummaryActivity extends AppCompatActivity {
         emotions = e_emotions.getEMOTIONS().getValue();
 
         Double confidenceLevel = 50.0;
-        if (!discomfort || !leak &&
+        if ((!discomfort || !leak) &&
                 emotions == emotion.emotions.e_joy.getValue())
             confidenceLevel=100.0;
-        else if (discomfort || !leak &&
+        else if ((discomfort || !leak) &&
                 (emotions == emotion.emotions.e_joy.getValue() ||
                         emotions == emotion.emotions.e_surprise.getValue()))
             confidenceLevel=90.0;
-        else if (!discomfort || leak &&
+        else if ((!discomfort || leak) &&
                 (emotions == emotion.emotions.e_joy.getValue() ||
                         emotions == emotion.emotions.e_surprise.getValue()))
             confidenceLevel=80.0;
-        else if (discomfort || leak &&
+        else if ((discomfort || leak) &&
                 (emotions == emotion.emotions.e_joy.getValue() ||
                         emotions == emotion.emotions.e_surprise.getValue()))
             confidenceLevel=70.0;
-        else if (!discomfort && leak &&
+        else if ((!discomfort && leak )&&
                 (emotions == emotion.emotions.e_disgust.getValue() ||
                         emotions == emotion.emotions.e_contempt.getValue()))
             confidenceLevel=60.0;
