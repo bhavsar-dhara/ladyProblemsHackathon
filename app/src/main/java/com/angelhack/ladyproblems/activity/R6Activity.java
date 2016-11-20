@@ -6,10 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.angelhack.ladyproblems.R;
 import com.angelhack.ladyproblems.dataModel.activityLevel;
 import com.angelhack.ladyproblems.dataModel.finalResult;
-
-import com.angelhack.ladyproblems.R;
 
 import static com.angelhack.ladyproblems.dataModel.activityLevel.activity.ac_high_exercise;
 import static com.angelhack.ladyproblems.dataModel.activityLevel.activity.ac_low_resting;

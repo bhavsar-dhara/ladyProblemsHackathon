@@ -21,7 +21,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginTop="42dp"
         android:text="@string/hours_of_insertion"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textStyle="normal|italic" />
 
     <Button

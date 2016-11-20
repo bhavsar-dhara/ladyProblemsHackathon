@@ -6,10 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.angelhack.ladyproblems.R;
 import com.angelhack.ladyproblems.dataModel.discomfort;
 import com.angelhack.ladyproblems.dataModel.finalResult;
-
-import com.angelhack.ladyproblems.R;
 
 import static com.angelhack.ladyproblems.dataModel.discomfort.options.d_no;
 import static com.angelhack.ladyproblems.dataModel.discomfort.options.d_yes;
