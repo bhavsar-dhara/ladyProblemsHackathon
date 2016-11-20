@@ -23,14 +23,14 @@
         android:onClick="takeAPic"
         android:text="@string/take_a_picture" />
 
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/button"
-        android:layout_below="@+id/button"
-        android:layout_marginTop="18dp"
-        android:onClick="uploadAPic"
-        android:text="@string/upload_a_picture" />
+    <!--<Button-->
+        <!--android:id="@+id/button2"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignStart="@+id/button"-->
+        <!--android:layout_below="@+id/button"-->
+        <!--android:layout_marginTop="18dp"-->
+        <!--android:onClick="uploadAPic"-->
+        <!--android:text="@string/upload_a_picture" />-->
 
 </RelativeLayout>
