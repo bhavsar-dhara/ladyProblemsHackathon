@@ -47,12 +47,6 @@ public class ResultSummaryActivity extends AppCompatActivity {
         faceEmotion = (TextView) findViewById(R.id.textView8);
         smileDegree = (TextView) findViewById(R.id.textView10);
 
-        confidenceLevel.setText(calculateConfidenceLevel().toString());
-        flowCalculation.setText(calculateFlowLevel().getText());
-        age.setText(finalResult.getInstance().getAge());
-        faceEmotion.setText(finalResult.getInstance().getEmotion().toString());
-        smileDegree.setText(String.valueOf(finalResult.getInstance().getSmileDegree()));
-
         leakage = finalResult.getInstance().getLeak();
         if(finalResult.getInstance().getEmotion() != null) {
             e_emotions = finalResult.getInstance().getEmotion();
@@ -62,6 +56,20 @@ public class ResultSummaryActivity extends AppCompatActivity {
         options = finalResult.getInstance().getDiscomfort();
         flow = finalResult.getInstance().getFlow();
         ac_activity = finalResult.getInstance().getActivityLevel();
+
+        confidenceLevel.setText(calculateConfidenceLevel().toString());
+        flowCalculation.setText(calculateFlowLevel().getText());
+        if(finalResult.getInstance().getEmotion() != null) {
+            age.setText(finalResult.getInstance().getAge());
+        } else {
+            age.setText("Age not recorded.");
+        }
+        if(finalResult.getInstance().getEmotion() != null) {
+            faceEmotion.setText(finalResult.getInstance().getEmotion().toString());
+        } else {
+            faceEmotion.setText("Emotion not recorded.");
+        }
+        smileDegree.setText(String.valueOf(finalResult.getInstance().getSmileDegree()));
     }
 
 
