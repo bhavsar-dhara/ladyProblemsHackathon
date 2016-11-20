@@ -26,6 +26,7 @@ public class finalResult {
     private leak leak;
     private letStart letStart;
     private String age;
+    private double smileDegree;
 
     public com.angelhack.ladyproblems.dataModel.absorbency getAbsorbency() {
         return absorbency;
@@ -105,5 +106,14 @@ public class finalResult {
 
     public void setAge(String age) {
         this.age = age;
+    }
+
+
+    public double getSmileDegree() {
+        return smileDegree;
+    }
+
+    public void setSmileDegree(double smileDegree) {
+        this.smileDegree = smileDegree;
     }
 }

@@ -21,6 +21,9 @@ public class ResultSummaryActivity extends AppCompatActivity {
 
     private TextView confidenceLevel;
     private TextView flowCalculation;
+    private TextView age;
+    private TextView faceEmotion;
+    private TextView smileDegree;
 
     private emotion e_emotions;
     private leak leakage;
@@ -40,9 +43,15 @@ public class ResultSummaryActivity extends AppCompatActivity {
 
         confidenceLevel = (TextView) findViewById(R.id.textView2);
         flowCalculation = (TextView) findViewById(R.id.textView4);
+        age = (TextView) findViewById(R.id.textView6);
+        faceEmotion = (TextView) findViewById(R.id.textView8);
+        smileDegree = (TextView) findViewById(R.id.textView10);
 
         confidenceLevel.setText(calculateConfidenceLevel().toString());
         flowCalculation.setText(calculateFlowLevel().getText());
+        age.setText(finalResult.getInstance().getAge());
+        faceEmotion.setText(finalResult.getInstance().getEmotion().toString());
+        smileDegree.setText(String.valueOf(finalResult.getInstance().getSmileDegree()));
 
         leakage = finalResult.getInstance().getLeak();
         if(finalResult.getInstance().getEmotion() != null) {

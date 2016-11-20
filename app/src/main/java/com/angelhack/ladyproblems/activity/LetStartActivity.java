@@ -23,9 +23,9 @@ public class LetStartActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
     }
 
-    public void removed(View view) {
-        finalResult.getInstance().setLetStart(new letStart(s_remove));
-        Intent intent = new Intent(this, R1Activity.class);
+    public void removed(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }
 
