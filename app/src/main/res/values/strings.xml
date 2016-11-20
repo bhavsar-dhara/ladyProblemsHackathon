@@ -4,4 +4,14 @@
     <string name="take_a_picture">Take a picture</string>
     <string name="upload_a_picture">Upload a picture</string>
     <string name="title_activity_cam_detect">CamDetectActivity</string>
+    <string name="title_activity_lets_start">LetsStart</string>
+    <string name="title_activity_let_start">LetStartActivity</string>
+    <string name="title_activity_r1">R1Activity</string>
+    <string name="title_activity_r2">R2Activity</string>
+    <string name="title_activity_r3">R3Activity</string>
+    <string name="title_activity_r4">R4Activity</string>
+    <string name="title_activity_r5">R5Activity</string>
+    <string name="title_activity_r6">R6Activity</string>
+    <string name="title_activity_r7">R7Activity</string>
+    <string name="title_activity_r8">R8Activity</string>
 </resources>
