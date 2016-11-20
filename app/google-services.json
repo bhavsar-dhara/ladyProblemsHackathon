@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "324484981487",
+    "firebase_url": "https://ladyproblems-ee936.firebaseio.com",
+    "project_id": "ladyproblems-ee936",
+    "storage_bucket": "ladyproblems-ee936.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324484981487:android:e8ca6a66de3dc019",
+        "android_client_info": {
+          "package_name": "com.angelhack.ladyproblems"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "324484981487-6k55i52dgas9fbch3vl27vs8gaftg706.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnImF-1ngs17eS-Gexcz0fKxgMNZ8nkVw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
