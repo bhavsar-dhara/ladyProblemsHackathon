@@ -41,7 +41,6 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.R1Activity"
-<<<<<<< HEAD
             android:label="Question 1"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -71,45 +70,7 @@
         <activity
             android:name=".activity.R8Activity"
             android:label="Question 8"
-=======
-            android:label="@string/title_activity_r1"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activity.R2Activity"
-            android:label="@string/title_activity_r2"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activity.R3Activity"
-            android:label="@string/title_activity_r3"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activity.R4Activity"
-            android:label="@string/title_activity_r4"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activity.R5Activity"
-            android:label="@string/title_activity_r5"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activity.R6Activity"
-            android:label="@string/title_activity_r6"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activity.R7Activity"
-            android:label="@string/title_activity_r7"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".activity.R8Activity"
-            android:label="@string/title_activity_r8"
-            android:screenOrientation="portrait"
->>>>>>> 5a6684f632f95dc8357fdd3788a8ee767cfe90ea
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.ResultSummaryActivity"
