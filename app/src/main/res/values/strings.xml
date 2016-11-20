@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">Lady Problems</string>
     <string name="title_activity_face_emo_detect">FaceEmoDetectActivity</string>
+    <string name="take_a_picture">Take a picture</string>
+    <string name="upload_a_picture">Upload a picture</string>
 </resources>
