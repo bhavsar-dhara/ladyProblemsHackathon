@@ -30,10 +30,10 @@ import java.util.List;
 
 public class CamDetectActivity
         extends AppCompatActivity
-        implements Detector.ImageListener, CameraDetector.CameraEventListener,
-            Detector.FaceListener{
+        implements Detector.ImageListener, CameraDetector.CameraEventListener {
 
     private static final String TAG = CamDetectActivity.class.getSimpleName();
+
     private final static int CAMERA_PERMISSIONS_REQUEST_CODE = 0;
     private final static String[] CAMERA_PERMISSIONS_REQUEST = new String[]{Manifest.permission.CAMERA};
     private boolean handleCameraPermissionGrant = false;
@@ -84,10 +84,18 @@ public class CamDetectActivity
         captureButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                isSDKStarted = true;
-                startDetector();
+                if (isSDKStarted) {
+                    isSDKStarted = false;
+                    stopDetector();
+                    captureButton.setText("Start Camera");
+                } else {
+                    isSDKStarted = true;
+                    startDetector();
+                    captureButton.setText("Stop Camera");
+                }
             }
         });
+        captureButton.setText("Start Camera");
 
         mainLayout = (RelativeLayout) findViewById(R.id.content_cam_detect);
 
@@ -164,50 +172,6 @@ public class CamDetectActivity
 
     @Override
     public void onCameraSizeSelected(int width, int height, Frame.ROTATE rotate) {
-//        int cameraPreviewWidth;
-//        int cameraPreviewHeight;
-//
-//        //cameraWidth and cameraHeight report the unrotated dimensions of the camera frames,
-//        // so switch the width and height if necessary
-//
-//        if (rotation == Frame.ROTATE.BY_90_CCW || rotation == Frame.ROTATE.BY_90_CW) {
-//            cameraPreviewWidth = cameraHeight;
-//            cameraPreviewHeight = cameraWidth;
-//        } else {
-//            cameraPreviewWidth = cameraWidth;
-//            cameraPreviewHeight = cameraHeight;
-//        }
-//
-//        //retrieve the width and height of the ViewGroup object containing our SurfaceView (in an
-//        // actual application, we would want to consider the possibility that the mainLayout object
-//        // may not have been sized yet)
-//
-//        int layoutWidth = mainLayout.getWidth();
-//        int layoutHeight = mainLayout.getHeight();
-//
-//        //compute the aspect Ratio of the ViewGroup object and the cameraPreview
-//
-//        float layoutAspectRatio = (float)layoutWidth/layoutHeight;
-//        float cameraPreviewAspectRatio = (float)cameraWidth/cameraHeight;
-//
-//        int newWidth;
-//        int newHeight;
-//
-//        if (cameraPreviewAspectRatio > layoutAspectRatio) {
-//            newWidth = layoutWidth;
-//            newHeight =(int) (layoutWidth / cameraPreviewAspectRatio);
-//        } else {
-//            newWidth = (int) (layoutHeight * cameraPreviewAspectRatio);
-//            newHeight = layoutHeight;
-//        }
-//
-//        //size the SurfaceView
-//
-//        ViewGroup.LayoutParams params = cameraPreview.getLayoutParams();
-//        params.height = newHeight;
-//        params.width = newWidth;
-//        cameraPreview.setLayoutParams(params);
-
 //        if (rotate == Frame.ROTATE.BY_90_CCW || rotate == Frame.ROTATE.BY_90_CW) {
 //            previewWidth = height;
 //            previewHeight = width;
@@ -216,8 +180,8 @@ public class CamDetectActivity
 //            previewWidth = width;
 //        }
 
-        previewHeight = height;
-        previewWidth = width;
+        previewHeight = width;
+        previewWidth = height;
         cameraPreview.requestLayout();
     }
 
@@ -281,9 +245,6 @@ public class CamDetectActivity
                     break;
             }
         }
-
-        isSDKStarted = false;
-        stopDetector();
     }
 
     private void requestPermission() {
@@ -345,15 +306,5 @@ public class CamDetectActivity
 
     private void switchCamera(CameraDetector.CameraType type) {
         detector.setCameraType(type);
-    }
-
-    @Override
-    public void onFaceDetectionStarted() {
-
-    }
-
-    @Override
-    public void onFaceDetectionStopped() {
-
     }
 }
