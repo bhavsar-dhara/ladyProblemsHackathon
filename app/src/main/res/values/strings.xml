@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Lady Problems</string>
+    <string name="title_activity_face_emo_detect">FaceEmoDetectActivity</string>
+</resources>
