@@ -19,7 +19,7 @@ public class R7Activity extends AppCompatActivity {
     }
 
     public void result(View view){
-        Intent intent = new Intent(this, R8Activity.class);
+        Intent intent = new Intent(this, ResultSummaryActivity.class);
         startActivity(intent);
     }
 

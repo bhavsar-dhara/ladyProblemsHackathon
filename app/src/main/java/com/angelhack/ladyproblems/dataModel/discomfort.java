@@ -15,6 +15,10 @@ public class discomfort {
         OPTIONS = options;
     }
 
+    public static options getOPTIONS() {
+        return OPTIONS;
+    }
+
     public enum options {
         d_yes(0),
         d_no(1);

@@ -83,7 +83,7 @@
             android:name=".activity.ResultSummaryActivity"
             android:label="@string/title_activity_result_summary"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

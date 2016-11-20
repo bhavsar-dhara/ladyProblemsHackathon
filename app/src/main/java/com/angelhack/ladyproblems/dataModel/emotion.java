@@ -16,6 +16,10 @@ public class emotion {
         EMOTIONS = emotions;
     }
 
+    public static emotions getEMOTIONS() {
+        return EMOTIONS;
+    }
+
     public enum emotions {
         e_anger(0),
         e_contempt(1),

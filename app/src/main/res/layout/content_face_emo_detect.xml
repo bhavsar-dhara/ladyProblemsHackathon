@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_alignParentTop="true"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:text="@string/please_take_a_picture_of_yours_and_record_your_emotions_right_now"
         android:layout_marginTop="42dp"/>
 
@@ -31,6 +31,7 @@
         android:onClick="takeAPic"
         android:text="@string/take_a_picture"
         android:layout_below="@+id/emo_capture_text"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:layout_alignParentStart="true" />
 
     <!--<Button-->

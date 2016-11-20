@@ -16,6 +16,10 @@ public class activityLevel {
         ACTIVITY = activity;
     }
 
+    public static activity getACTIVITY() {
+        return ACTIVITY;
+    }
+
     public enum activity {
         ac_sleeping(0),
         ac_low_resting(1),
