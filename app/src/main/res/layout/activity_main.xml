@@ -8,7 +8,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.angelhack.ladyproblems.activity.MainActivity">
+    tools:context="com.angelhack.ladyproblems.activity.MainActivity"
+    android:background="@drawable/women_web">
 
     <TextView
         android:layout_width="wrap_content"
