@@ -32,18 +32,6 @@
         android:layout_toEndOf="@+id/image3"
         android:layout_marginTop="25dp" />
 
-    <ImageView
-        android:id="@+id/image1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:contentDescription="icon"
-        android:layout_gravity="center"
-        android:src="@drawable/cam_web"
-        android:layout_marginTop="31dp"
-        android:layout_below="@+id/textView15"
-        android:layout_toEndOf="@+id/textView15"
-        android:layout_marginStart="19dp" />
-
     <TextView
         android:text="Ease Of Use"
         android:layout_width="wrap_content"
@@ -78,31 +66,6 @@
         android:layout_alignParentStart="true" />
 
     <TextView
-        android:text="Emotion Recognition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:id="@+id/textView15"
-        android:textSize="8sp"
-        android:fontFamily="sans-serif"
-        android:textStyle="normal|bold"
-        android:textAlignment="textStart"
-        android:layout_below="@+id/image2"
-        android:layout_toStartOf="@+id/textView14"
-        android:layout_marginEnd="12dp" />
-
-    <TextView
-        android:text="Accessibility"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView16"
-        android:textStyle="normal|bold"
-        android:textAlignment="textStart"
-        android:layout_above="@+id/image1"
-        android:layout_toEndOf="@+id/textView17"
-        android:layout_marginStart="14dp" />
-
-    <TextView
         android:text="Product Features"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -113,5 +76,52 @@
         android:layout_below="@+id/button14"
         android:layout_alignEnd="@+id/button14"
         android:layout_marginTop="31dp" />
+
+    <TextView
+        android:text="Emotion Recognition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:id="@+id/textView15"
+        android:textSize="10sp"
+        android:fontFamily="sans-serif"
+        android:textStyle="normal|bold"
+        android:textAlignment="textStart"
+        android:layout_below="@+id/image2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="13dp" />
+
+    <TextView
+        android:text="Accessibility"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView16"
+        android:textStyle="normal|bold"
+        android:textAlignment="textStart"
+        android:layout_above="@+id/image1"
+        android:layout_alignStart="@+id/image2" />
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:contentDescription="icon"
+        android:layout_gravity="center"
+        android:src="@drawable/cam_web"
+        android:layout_marginTop="27dp"
+        android:layout_below="@+id/textView15"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="@Copyright: m00dSwings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:id="@+id/textView18"
+        android:textSize="10sp"
+        android:textStyle="normal|bold|italic"
+        android:textAlignment="textStart"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/textView16" />
 
 </RelativeLayout>
