@@ -33,32 +33,22 @@ public class R8Activity extends AppCompatActivity {
 
     public void ultra(View view){
         finalResult.getInstance().setAbsorbency(new absorbency(ab_ultra));
-        Intent intent = new Intent(this, absorbency.class);
-        startActivity(intent);
     }
 
     public void lite(View view){
         finalResult.getInstance().setAbsorbency(new absorbency(ab_lite));
-        Intent intent = new Intent(this, absorbency.class);
-        startActivity(intent);
     }
 
     public void super1(View view){
         finalResult.getInstance().setAbsorbency(new absorbency(ab_super));
-        Intent intent = new Intent(this, absorbency.class);
-        startActivity(intent);
     }
 
     public void superplus(View view){
         finalResult.getInstance().setAbsorbency(new absorbency(ab_super_plus));
-        Intent intent = new Intent(this, absorbency.class);
-        startActivity(intent);
     }
 
     public void regular(View view){
         finalResult.getInstance().setAbsorbency(new absorbency(ab_regular));
-        Intent intent = new Intent(this, absorbency.class);
-        startActivity(intent);
     }
 
 }
