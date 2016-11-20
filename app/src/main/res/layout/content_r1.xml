@@ -13,6 +13,15 @@
     tools:context="com.angelhack.ladyproblems.activity.R1Activity"
     tools:showIn="@layout/activity_r1">
 
+    <ImageView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/background"
+        android:alpha=".45"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        />
+
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
