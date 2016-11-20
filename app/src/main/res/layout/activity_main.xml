@@ -24,4 +24,15 @@
         android:layout_marginTop="159dp"
         android:id="@+id/button14"
         android:onClick="startTampaxAlgo"/>
+
+    <Button
+        android:text="Cam Test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+        android:id="@+id/button15"
+        android:onClick="startCamTest"
+        android:layout_below="@+id/button14"
+        android:layout_alignEnd="@+id/button14" />
+
 </RelativeLayout>

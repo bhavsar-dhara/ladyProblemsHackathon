@@ -29,11 +29,8 @@
         <activity
             android:name=".activity.CamDetectActivity"
             android:label="@string/title_activity_cam_detect"
-            android:theme="@style/AppTheme.NoActionBar" />
-        <activity
-            android:name=".LetsStart"
-            android:label="@string/title_activity_lets_start"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".activity.LetStartActivity"
             android:label="@string/title_activity_let_start"
@@ -69,7 +66,7 @@
         <activity
             android:name=".activity.R8Activity"
             android:label="@string/title_activity_r8"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
 </manifest>

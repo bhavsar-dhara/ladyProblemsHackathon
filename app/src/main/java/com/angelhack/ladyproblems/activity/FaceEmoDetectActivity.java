@@ -1,5 +1,6 @@
 package com.angelhack.ladyproblems.activity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -19,10 +20,11 @@ public class FaceEmoDetectActivity extends AppCompatActivity {
     }
 
     public void takeAPic(View view) {
-
+        Intent intent = new Intent(this, CamDetectActivity.class);
+        startActivity(intent);
     }
 
-    public void uploadAPic(View view) {
-
-    }
+//    public void uploadAPic(View view) {
+//
+//    }
 }

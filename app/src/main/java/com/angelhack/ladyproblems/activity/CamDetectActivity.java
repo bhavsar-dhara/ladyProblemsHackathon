@@ -14,6 +14,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -40,13 +41,14 @@ public class CamDetectActivity
     private TextView smileTextView;
     private TextView ageTextView;
     private TextView ethnicityTextView;
-    ToggleButton toggleButton;
+    private ToggleButton toggleButton;
+    private Button captureButton;
 
     private boolean isCameraBack = false;
     private boolean isSDKStarted = false;
 
     private RelativeLayout mainLayout;
-    SurfaceView cameraPreview;
+    private SurfaceView cameraPreview;
 
     private int previewWidth = 0;
     private int previewHeight = 0;
@@ -74,6 +76,16 @@ public class CamDetectActivity
                 switchCamera(isCameraBack
                         ? CameraDetector.CameraType.CAMERA_BACK
                         : CameraDetector.CameraType.CAMERA_FRONT);
+            }
+        });
+
+        // TODO
+        captureButton = (Button) findViewById(R.id.capture_button);
+        captureButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                isSDKStarted = true;
+                startDetector();
             }
         });
 
@@ -151,57 +163,127 @@ public class CamDetectActivity
     }
 
     @Override
-    public void onCameraSizeSelected(int cameraWidth, int cameraHeight, Frame.ROTATE rotation) {
-        int cameraPreviewWidth;
-        int cameraPreviewHeight;
+    public void onCameraSizeSelected(int width, int height, Frame.ROTATE rotate) {
+//        int cameraPreviewWidth;
+//        int cameraPreviewHeight;
+//
+//        //cameraWidth and cameraHeight report the unrotated dimensions of the camera frames,
+//        // so switch the width and height if necessary
+//
+//        if (rotation == Frame.ROTATE.BY_90_CCW || rotation == Frame.ROTATE.BY_90_CW) {
+//            cameraPreviewWidth = cameraHeight;
+//            cameraPreviewHeight = cameraWidth;
+//        } else {
+//            cameraPreviewWidth = cameraWidth;
+//            cameraPreviewHeight = cameraHeight;
+//        }
+//
+//        //retrieve the width and height of the ViewGroup object containing our SurfaceView (in an
+//        // actual application, we would want to consider the possibility that the mainLayout object
+//        // may not have been sized yet)
+//
+//        int layoutWidth = mainLayout.getWidth();
+//        int layoutHeight = mainLayout.getHeight();
+//
+//        //compute the aspect Ratio of the ViewGroup object and the cameraPreview
+//
+//        float layoutAspectRatio = (float)layoutWidth/layoutHeight;
+//        float cameraPreviewAspectRatio = (float)cameraWidth/cameraHeight;
+//
+//        int newWidth;
+//        int newHeight;
+//
+//        if (cameraPreviewAspectRatio > layoutAspectRatio) {
+//            newWidth = layoutWidth;
+//            newHeight =(int) (layoutWidth / cameraPreviewAspectRatio);
+//        } else {
+//            newWidth = (int) (layoutHeight * cameraPreviewAspectRatio);
+//            newHeight = layoutHeight;
+//        }
+//
+//        //size the SurfaceView
+//
+//        ViewGroup.LayoutParams params = cameraPreview.getLayoutParams();
+//        params.height = newHeight;
+//        params.width = newWidth;
+//        cameraPreview.setLayoutParams(params);
 
-        //cameraWidth and cameraHeight report the unrotated dimensions of the camera frames,
-        // so switch the width and height if necessary
+//        if (rotate == Frame.ROTATE.BY_90_CCW || rotate == Frame.ROTATE.BY_90_CW) {
+//            previewWidth = height;
+//            previewHeight = width;
+//        } else {
+//            previewHeight = height;
+//            previewWidth = width;
+//        }
 
-        if (rotation == Frame.ROTATE.BY_90_CCW || rotation == Frame.ROTATE.BY_90_CW) {
-            cameraPreviewWidth = cameraHeight;
-            cameraPreviewHeight = cameraWidth;
-        } else {
-            cameraPreviewWidth = cameraWidth;
-            cameraPreviewHeight = cameraHeight;
-        }
-
-        //retrieve the width and height of the ViewGroup object containing our SurfaceView (in an
-        // actual application, we would want to consider the possibility that the mainLayout object
-        // may not have been sized yet)
-
-        int layoutWidth = mainLayout.getWidth();
-        int layoutHeight = mainLayout.getHeight();
-
-        //compute the aspect Ratio of the ViewGroup object and the cameraPreview
-
-        float layoutAspectRatio = (float)layoutWidth/layoutHeight;
-        float cameraPreviewAspectRatio = (float)cameraWidth/cameraHeight;
-
-        int newWidth;
-        int newHeight;
-
-        if (cameraPreviewAspectRatio > layoutAspectRatio) {
-            newWidth = layoutWidth;
-            newHeight =(int) (layoutWidth / cameraPreviewAspectRatio);
-        } else {
-            newWidth = (int) (layoutHeight * cameraPreviewAspectRatio);
-            newHeight = layoutHeight;
-        }
-
-        //size the SurfaceView
-
-        ViewGroup.LayoutParams params = cameraPreview.getLayoutParams();
-        params.height = newHeight;
-        params.width = newWidth;
-        cameraPreview.setLayoutParams(params);
-
-//        cameraPreview.requestLayout();
+        previewHeight = height;
+        previewWidth = width;
+        cameraPreview.requestLayout();
     }
 
     @Override
     public void onImageResults(List<Face> list, Frame frame, float v) {
 
+        if (list == null)
+            return;
+        if (list.size() == 0) {
+            smileTextView.setText("NO FACE");
+            ageTextView.setText("");
+            ethnicityTextView.setText("");
+        } else {
+            Face face = list.get(0);
+            smileTextView.setText(String.format("SMILE\n%.2f",face.expressions.getSmile()));
+            switch (face.appearance.getAge()) {
+                case AGE_UNKNOWN:
+                    ageTextView.setText("");
+                    break;
+                case AGE_UNDER_18:
+                    ageTextView.setText(R.string.age_under_18);
+                    break;
+                case AGE_18_24:
+                    ageTextView.setText(R.string.age_18_24);
+                    break;
+                case AGE_25_34:
+                    ageTextView.setText(R.string.age_25_34);
+                    break;
+                case AGE_35_44:
+                    ageTextView.setText(R.string.age_35_44);
+                    break;
+                case AGE_45_54:
+                    ageTextView.setText(R.string.age_45_54);
+                    break;
+                case AGE_55_64:
+                    ageTextView.setText(R.string.age_55_64);
+                    break;
+                case AGE_65_PLUS:
+                    ageTextView.setText(R.string.age_over_64);
+                    break;
+            }
+
+            switch (face.appearance.getEthnicity()) {
+                case UNKNOWN:
+                    ethnicityTextView.setText("");
+                    break;
+                case CAUCASIAN:
+                    ethnicityTextView.setText(R.string.ethnicity_caucasian);
+                    break;
+                case BLACK_AFRICAN:
+                    ethnicityTextView.setText(R.string.ethnicity_black_african);
+                    break;
+                case EAST_ASIAN:
+                    ethnicityTextView.setText(R.string.ethnicity_east_asian);
+                    break;
+                case SOUTH_ASIAN:
+                    ethnicityTextView.setText(R.string.ethnicity_south_asian);
+                    break;
+                case HISPANIC:
+                    ethnicityTextView.setText(R.string.ethnicity_hispanic);
+                    break;
+            }
+        }
+
+        isSDKStarted = false;
+        stopDetector();
     }
 
     private void requestPermission() {

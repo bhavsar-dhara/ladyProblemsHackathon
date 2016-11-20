@@ -19,4 +19,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, LetStartActivity.class);
         startActivity(intent);
     }
+
+    public void startCamTest(View view) {
+        Intent intent = new Intent(this, FaceEmoDetectActivity.class);
+        startActivity(intent);
+    }
 }
