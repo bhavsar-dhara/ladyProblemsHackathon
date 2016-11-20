@@ -10,6 +10,12 @@ public class flow {
 
     private static final String TAG = flow.class.getSimpleName();
 
+    private static flows FLOWS;
+
+    public flow(flows flows){
+        FLOWS = flows;
+    }
+
     public enum flows {
         f_increase(0),
         f_same_as_before(1),

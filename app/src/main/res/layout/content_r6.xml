@@ -31,7 +31,7 @@
         android:layout_alignStart="@+id/button19"
         android:layout_below="@+id/textView8"
         android:layout_marginTop="42dp"
-        android:onClick="activityLevel"
+        android:onClick="sleep"
         android:text="@string/sleeping_upto_8_hours"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -42,7 +42,7 @@
         android:layout_alignStart="@+id/textView8"
         android:layout_below="@+id/button18"
         android:layout_marginTop="32dp"
-        android:onClick="activityLevel"
+        android:onClick="low"
         android:text="@string/low_or_resting"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -53,7 +53,7 @@
         android:layout_alignStart="@+id/button19"
         android:layout_below="@+id/button19"
         android:layout_marginTop="32dp"
-        android:onClick="activityLevel"
+        android:onClick="mod"
         android:text="@string/moderate_or_sitting"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -64,7 +64,7 @@
         android:layout_alignStart="@+id/button18"
         android:layout_below="@+id/button20"
         android:layout_marginTop="32dp"
-        android:onClick="activityLevel"
+        android:onClick="high"
         android:text="@string/high_or_exercising"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 

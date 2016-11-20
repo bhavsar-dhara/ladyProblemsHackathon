@@ -30,7 +30,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/textView7"
         android:layout_marginTop="42dp"
-        android:onClick="flow"
+        android:onClick="decrease"
         android:text="@string/decrease"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -41,7 +41,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/button15"
         android:layout_marginTop="32dp"
-        android:onClick="flow"
+        android:onClick="same"
         android:text="@string/stay_same"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -52,7 +52,7 @@
         android:layout_alignParentStart="true"
         android:layout_below="@+id/button16"
         android:layout_marginTop="32dp"
-        android:onClick="flow"
+        android:onClick="increase"
         android:text="@string/increase"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 

@@ -42,7 +42,7 @@
         android:layout_alignStart="@+id/button11"
         android:layout_below="@+id/button11"
         android:layout_marginTop="32dp"
-        android:onClick="anotherTampon"
+        android:onClick="noTampon"
         android:text="@string/no"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 

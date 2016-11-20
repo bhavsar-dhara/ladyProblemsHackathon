@@ -39,11 +39,10 @@
         android:id="@+id/button6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="lessThan3"
-        android:text="@string/_3"
         android:layout_below="@+id/button5"
-        android:layout_alignStart="@+id/button5"
         android:layout_marginTop="32dp"
+        android:onClick="greaterThan3"
+        android:text="@string/_3"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
 </RelativeLayout>

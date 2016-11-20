@@ -47,6 +47,7 @@
             android:layout_below="@+id/textView11"
             android:layout_marginStart="29dp"
             android:layout_marginTop="23dp"
+            android:onClick="lite"
             android:text="@string/lite"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -57,6 +58,7 @@
             android:layout_alignStart="@+id/radioButton"
             android:layout_below="@+id/radioButton"
             android:layout_marginTop="20dp"
+            android:onClick="regular"
             android:text="@string/regular"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -67,6 +69,7 @@
             android:layout_alignStart="@+id/radioButton2"
             android:layout_below="@+id/radioButton2"
             android:layout_marginTop="20dp"
+            android:onClick="super1"
             android:text="@string/super_"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -77,6 +80,7 @@
             android:layout_alignStart="@+id/radioButton3"
             android:layout_below="@+id/radioButton3"
             android:layout_marginTop="20dp"
+            android:onClick="superplus"
             android:text="@string/super_plus"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
@@ -87,6 +91,7 @@
             android:layout_alignStart="@+id/radioButton4"
             android:layout_below="@+id/radioButton4"
             android:layout_marginTop="20dp"
+            android:onClick="ultra"
             android:text="@string/ultra"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 

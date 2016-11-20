@@ -9,6 +9,12 @@ import android.util.Log;
 public class letStart {
     private static final String TAG = letStart.class.getSimpleName();
 
+    private static letStartOptions LET_START_OPTION;
+
+    public letStart(letStartOptions letStartOptions) {
+        LET_START_OPTION = letStartOptions;
+    }
+
     public enum letStartOptions {
         s_remove(0),
         s_insert(1);
