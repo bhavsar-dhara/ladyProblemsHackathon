@@ -50,10 +50,8 @@ public class ResultSummaryActivity extends AppCompatActivity {
         leakage = finalResult.getInstance().getLeak();
         if(finalResult.getInstance().getEmotion() != null) {
             e_emotions = finalResult.getInstance().getEmotion();
-            faceEmotion.setText(finalResult.getInstance().getEmotion().toString());
         } else {
             e_emotions = new emotion(emotion.emotions.e_contempt);
-            faceEmotion.setText("Emotion not recorded.");
         }
         options = finalResult.getInstance().getDiscomfort();
         flow = finalResult.getInstance().getFlow();
@@ -65,6 +63,11 @@ public class ResultSummaryActivity extends AppCompatActivity {
             age.setText(finalResult.getInstance().getAge());
         } else {
             age.setText("Age not recorded.");
+        }
+        if(finalResult.getInstance().getEmotion() != null) {
+            faceEmotion.setText(finalResult.getInstance().getEmotion().toString());
+        } else {
+            faceEmotion.setText("Emotion not recorded.");
         }
         smileDegree.setText(String.valueOf(finalResult.getInstance().getSmileDegree()));
     }
