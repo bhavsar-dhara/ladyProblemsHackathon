@@ -25,7 +25,6 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 
-
     compile 'com.android.support:appcompat-v7:25.0.0'
     compile 'com.affectiva.android:affdexsdk:3.1.2'
     compile 'com.android.support:design:25.0.0'
