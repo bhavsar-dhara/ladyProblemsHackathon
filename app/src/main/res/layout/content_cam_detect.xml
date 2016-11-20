@@ -10,7 +10,48 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.angelhack.ladyproblems.CamDetectActivity"
+    tools:context="com.angelhack.ladyproblems.activity.CamDetectActivity"
     tools:showIn="@layout/activity_cam_detect">
+
+    <TextView
+        android:id="@+id/smile_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        tools:text="Smile" />
+
+    <TextView
+        android:id="@+id/age_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/smile_textview"
+        android:layout_margin="16dp"
+        tools:text="Age" />
+
+    <TextView
+        android:id="@+id/ethnicity_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/age_textview"
+        android:layout_margin="16dp"
+        tools:text="Ethnicity" />
+
+    <ToggleButton
+        android:id="@+id/front_back_toggle_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:padding="10dp"
+        android:textOff="@string/front_cam_on"
+        android:textOn="@string/back_cam_on" />
+
+    <Button
+        android:id="@+id/capture_button"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/camera"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true" />
 
 </RelativeLayout>
