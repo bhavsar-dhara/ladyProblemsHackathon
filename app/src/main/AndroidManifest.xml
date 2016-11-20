@@ -36,7 +36,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.LetStartActivity"
-            android:label="@string/title_activity_let_start"
+            android:label="Questionnaire"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
@@ -76,7 +76,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.R8Activity"
-            android:label="Question 8"
+            android:label="Feedback"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
