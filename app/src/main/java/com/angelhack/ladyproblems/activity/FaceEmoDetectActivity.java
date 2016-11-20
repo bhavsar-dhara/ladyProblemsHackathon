@@ -16,7 +16,6 @@ public class FaceEmoDetectActivity extends AppCompatActivity {
         setContentView(R.layout.activity_face_emo_detect);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
     }
 
     public void takeAPic(View view) {
