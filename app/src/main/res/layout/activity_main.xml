@@ -22,20 +22,10 @@
         android:text="Tampax Algo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="92dp"
-        android:layout_marginTop="159dp"
         android:id="@+id/button14"
-        android:onClick="startTampaxAlgo"/>
-
-    <Button
-        android:text="Cam Test"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="11dp"
-        android:id="@+id/button15"
-        android:onClick="startCamTest"
-        android:layout_below="@+id/button14"
-        android:layout_alignEnd="@+id/button14" />
+        android:onClick="startTampaxAlgo"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="173dp" />
 
 </RelativeLayout>

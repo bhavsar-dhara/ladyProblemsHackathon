@@ -42,30 +42,37 @@
         <activity
             android:name=".activity.R1Activity"
             android:label="Question 1"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.R2Activity"
             android:label="Question 2"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.R3Activity"
             android:label="Question 3"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.R4Activity"
             android:label="Question 4"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.R5Activity"
             android:label="Question 5"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.R6Activity"
             android:label="Question 6"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.R7Activity"
             android:label="Question 7"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".activity.R8Activity"
@@ -75,6 +82,7 @@
         <activity
             android:name=".activity.ResultSummaryActivity"
             android:label="@string/title_activity_result_summary"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
