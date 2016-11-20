@@ -13,45 +13,47 @@
     tools:context="com.angelhack.ladyproblems.activity.R5Activity"
     tools:showIn="@layout/activity_r5">
 
-    <Button
-        android:text="Increase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button16"
-        android:layout_alignStart="@+id/button15"
-        android:layout_marginTop="20dp"
-        android:id="@+id/button17"
-        android:layout_alignEnd="@+id/button15"
-        android:onClick="flow"/>
-
     <TextView
-        android:text="Next Menstrual Flow??"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="93dp"
         android:id="@+id/textView7"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="24dp" />
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="42dp"
+        android:text="@string/next_menstrual_flow"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
     <Button
-        android:text="Stay same"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/button16"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/button15"
-        android:onClick="flow"/>
-
-    <Button
-        android:text="Decrease"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/button15"
-        android:layout_above="@+id/button16"
-        android:layout_alignStart="@+id/textView7"
-        android:layout_marginBottom="15dp"
-        android:onClick="flow"/>
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView7"
+        android:layout_marginTop="42dp"
+        android:onClick="flow"
+        android:text="@string/decrease"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <Button
+        android:id="@+id/button16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button15"
+        android:layout_marginTop="32dp"
+        android:onClick="flow"
+        android:text="@string/stay_same"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/button16"
+        android:layout_marginTop="32dp"
+        android:onClick="flow"
+        android:text="@string/increase"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
 </RelativeLayout>

@@ -1,92 +1,106 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/content_r8"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.angelhack.ladyproblems.activity.R8Activity"
-    tools:showIn="@layout/activity_r8">
+    android:layout_height="match_parent">
 
-    <RadioButton
-        android:text="Lite"
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/content_r8"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView10"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="95dp"
-        android:id="@+id/radioButton" />
+        android:layout_marginTop="36dp"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.angelhack.ladyproblems.activity.R8Activity"
+        tools:showIn="@layout/activity_r8">
 
-    <RadioButton
-        android:text="Regular"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/radioButton"
-        android:layout_alignStart="@+id/radioButton"
-        android:layout_marginTop="33dp"
-        android:id="@+id/radioButton2" />
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="32dp"
+            android:text="@string/our_suggestion"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
 
-    <RadioButton
-        android:text="Super"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/radioButton2"
-        android:layout_alignStart="@+id/radioButton2"
-        android:layout_marginTop="30dp"
-        android:id="@+id/radioButton3" />
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView10"
+            android:layout_marginTop="23dp"
+            android:text="@string/which_tampon_you_chose"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="normal|italic" />
 
-    <RadioButton
-        android:text="Super Plus"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/radioButton3"
-        android:layout_alignStart="@+id/radioButton3"
-        android:layout_marginTop="30dp"
-        android:id="@+id/radioButton4" />
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView11"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="23dp"
+            android:text="@string/lite"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <RadioButton
-        android:text="Ultra"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/radioButton4"
-        android:layout_alignStart="@+id/radioButton4"
-        android:layout_marginTop="18dp"
-        android:id="@+id/radioButton5" />
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/radioButton"
+            android:layout_below="@+id/radioButton"
+            android:layout_marginTop="20dp"
+            android:text="@string/regular"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <TextView
-        android:text="Our suggestion ..."
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:id="@+id/textView10"
-        android:textAppearance="@style/TextAppearance.AppCompat.Notification.Title"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/radioButton2"
+            android:layout_below="@+id/radioButton2"
+            android:layout_marginTop="20dp"
+            android:text="@string/super_"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <TextView
-        android:text="Which tampon you chose?"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView10"
-        android:layout_alignStart="@+id/radioButton"
-        android:layout_marginTop="33dp"
-        android:id="@+id/textView11"
-        android:textStyle="normal|italic" />
+        <RadioButton
+            android:id="@+id/radioButton4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/radioButton3"
+            android:layout_below="@+id/radioButton3"
+            android:layout_marginTop="20dp"
+            android:text="@string/super_plus"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <Button
-        android:text="End"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/textView10"
-        android:layout_marginStart="13dp"
-        android:layout_marginBottom="11dp"
-        android:id="@+id/button22"
-        android:onClick="done"/>
-</RelativeLayout>
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/radioButton4"
+            android:layout_below="@+id/radioButton4"
+            android:layout_marginTop="20dp"
+            android:text="@string/ultra"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <Button
+            android:id="@+id/button22"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/radioButton5"
+            android:layout_marginTop="23dp"
+            android:onClick="done"
+            android:text="@string/end"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    </RelativeLayout>
+
+</ScrollView>
