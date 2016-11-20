@@ -26,6 +26,7 @@ import com.affectiva.android.affdex.sdk.detector.Detector;
 import com.affectiva.android.affdex.sdk.detector.Face;
 import com.angelhack.ladyproblems.R;
 import com.angelhack.ladyproblems.dataModel.emotion;
+import com.angelhack.ladyproblems.dataModel.finalResult;
 
 import java.util.List;
 
@@ -82,7 +83,6 @@ public class CamDetectActivity
             }
         });
 
-        // TODO
         captureButton = (Button) findViewById(R.id.capture_button);
         captureButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -91,6 +91,8 @@ public class CamDetectActivity
                     isSDKStarted = false;
                     stopDetector();
                     captureButton.setText("Start Camera");
+                    saveDataCaptured();
+                    finish();
                 } else {
                     isSDKStarted = true;
                     startDetector();
@@ -337,5 +339,10 @@ public class CamDetectActivity
 
     private void switchCamera(CameraDetector.CameraType type) {
         detector.setCameraType(type);
+    }
+
+    private void saveDataCaptured() {
+        finalResult.getInstance().setAge(ageTextView.getText().toString());
+        finalResult.getInstance().setEmotion(new emotion(emotion.emotions.valueOf(emotionTextView.getText().toString())));
     }
 }
