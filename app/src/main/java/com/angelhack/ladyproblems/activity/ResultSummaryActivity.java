@@ -49,7 +49,7 @@ public class ResultSummaryActivity extends AppCompatActivity {
 
         confidenceLevel.setText(calculateConfidenceLevel().toString());
         flowCalculation.setText(calculateFlowLevel().getText());
-        age.setText(finalResult.getInstance().getAge());
+        age.setText(finalResult.getInstance().getAge().toString());
         faceEmotion.setText(finalResult.getInstance().getEmotion().toString());
         smileDegree.setText(String.valueOf(finalResult.getInstance().getSmileDegree()));
 
