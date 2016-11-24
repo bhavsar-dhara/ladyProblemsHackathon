@@ -26,6 +26,7 @@ import com.affectiva.android.affdex.sdk.detector.CameraDetector;
 import com.affectiva.android.affdex.sdk.detector.Detector;
 import com.affectiva.android.affdex.sdk.detector.Face;
 import com.angelhack.ladyproblems.R;
+import com.angelhack.ladyproblems.dataModel.age;
 import com.angelhack.ladyproblems.dataModel.emotion;
 import com.angelhack.ladyproblems.dataModel.finalResult;
 
@@ -60,7 +61,8 @@ public class CamDetectActivity
     private CameraDetector detector;
 
     private String emotions = "";
-    private String age = "";
+    //private String age;
+    private age ageValue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -245,35 +247,43 @@ public class CamDetectActivity
             smileTextView.setText(String.format("SMILE\n%.2f",face.expressions.getSmile()));
             switch (face.appearance.getAge()) {
                 case AGE_UNKNOWN:
-                    age = "";
+                    //age = "";
+                    ageValue = new age(age.ages.a_unknown);
                     ageTextView.setText("");
                     break;
                 case AGE_UNDER_18:
-                    age = getString(R.string.age_under_18);
+                    //age = getString(R.string.age_under_18);
+                    ageValue = new age(age.ages.a_under18);
                     ageTextView.setText(R.string.age_under_18);
                     break;
                 case AGE_18_24:
-                    age = getString(R.string.age_18_24);
+                    //age = getString(R.string.age_18_24);
+                    ageValue = new age(age.ages.a_18t024);
                     ageTextView.setText(R.string.age_18_24);
                     break;
                 case AGE_25_34:
-                    age = getString(R.string.age_25_34);
+                    //age = getString(R.string.age_25_34);
+                    ageValue = new age(age.ages.a_25to34);
                     ageTextView.setText(R.string.age_25_34);
                     break;
                 case AGE_35_44:
-                    age = getString(R.string.age_35_44);
+                    //age = getString(R.string.age_35_44);
+                    ageValue = new age(age.ages.a_35to44);
                     ageTextView.setText(R.string.age_35_44);
                     break;
                 case AGE_45_54:
-                    age = getString(R.string.age_45_54);
+                    //age = getString(R.string.age_45_54);
+                    ageValue = new age(age.ages.a_45to54);
                     ageTextView.setText(R.string.age_45_54);
                     break;
                 case AGE_55_64:
-                    age = getString(R.string.age_55_64);
+                    //age = getString(R.string.age_55_64);
+                    ageValue = new age(age.ages.a_55to64);
                     ageTextView.setText(R.string.age_55_64);
                     break;
                 case AGE_65_PLUS:
-                    age = getString(R.string.age_over_64);
+                    //age = getString(R.string.age_over_64);
+                    ageValue = new age(age.ages.a_65plus);
                     ageTextView.setText(R.string.age_over_64);
                     break;
             }
@@ -363,7 +373,8 @@ public class CamDetectActivity
     }
 
     private void saveDataCaptured() {
-        finalResult.getInstance().setAge(age);
+      //  finalResult.getInstance().setAge(age);
+        finalResult.getInstance().setAge(ageValue);
         if (emotions != null) {
             if(emotions.equals(emotion.emotions.e_anger.getText())) {
                 finalResult.getInstance().setEmotion(new emotion(emotion.emotions.e_anger));

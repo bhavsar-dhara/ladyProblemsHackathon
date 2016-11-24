@@ -10,6 +10,7 @@ import android.widget.TextView;
 import com.angelhack.ladyproblems.R;
 import com.angelhack.ladyproblems.dataModel.activityLevel;
 import com.angelhack.ladyproblems.dataModel.discomfort;
+import com.angelhack.ladyproblems.dataModel.age;
 import com.angelhack.ladyproblems.dataModel.emotion;
 import com.angelhack.ladyproblems.dataModel.finalResult;
 import com.angelhack.ladyproblems.dataModel.flow;
@@ -47,7 +48,13 @@ public class ResultSummaryActivity extends AppCompatActivity {
         faceEmotion = (TextView) findViewById(R.id.textView8);
         smileDegree = (TextView) findViewById(R.id.textView10);
 
+        confidenceLevel.setText(calculateConfidenceLevel().toString());
+        flowCalculation.setText(calculateFlowLevel().getText());
+        age.setText(finalResult.getInstance().getAge().toString());
+        faceEmotion.setText(finalResult.getInstance().getEmotion().toString());
+        smileDegree.setText(String.valueOf(finalResult.getInstance().getSmileDegree()));
         leakage = finalResult.getInstance().getLeak();
+
         if(finalResult.getInstance().getEmotion() != null) {
             e_emotions = finalResult.getInstance().getEmotion();
         } else {
@@ -59,13 +66,17 @@ public class ResultSummaryActivity extends AppCompatActivity {
 
         confidenceLevel.setText(calculateConfidenceLevel().toString());
         flowCalculation.setText(calculateFlowLevel().getText());
-        if(finalResult.getInstance().getEmotion() != null) {
-            age.setText(finalResult.getInstance().getAge());
+
+
+        if(finalResult.getInstance().getAge() != null) {
+            age ageValue = finalResult.getInstance().getAge();
+            age.setText(ageValue.getAGES().getText());
         } else {
             age.setText("Age not recorded.");
         }
         if(finalResult.getInstance().getEmotion() != null) {
-            faceEmotion.setText(finalResult.getInstance().getEmotion().toString());
+            emotion emotionValue = finalResult.getInstance().getEmotion();
+            faceEmotion.setText(emotionValue.getEMOTIONS().getText());
         } else {
             faceEmotion.setText("Emotion not recorded.");
         }
