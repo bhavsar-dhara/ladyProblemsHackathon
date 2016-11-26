@@ -1,4 +1,4 @@
-# TampaX Check
+# TampX Check
 
 An Android application to suggest the tampon with a correct absorbency level by analysing the mood using face recognition API and analysing the survey results of the Tampax algorithm.
 
