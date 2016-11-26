@@ -1,6 +1,6 @@
 # TampX Check
 
-An Android application to suggest the tampon with a correct absorbency level by analysing the mood using face recognition API and analysing the survey results of the Tampax algorithm.
+An Android application to suggest the tampon with a correct absorbency level by analysing the emotion using face recognition API along with the survey results of the Tampax algorithm.
 
 ## How it works 
 Over 40% of women depend on tampons to give them freedom, confidence and discretion during their period. Even though over half of these women experience issues like leakage and removal discomfort that could be eliminated by altering tampon absorbency throughout their period, only about 1 out of 10 women varies her tampon absorbency. Our project utilizes input from a woman each time she is changing her tampon - menses flow, length of wear time, activity level, removal discomfort and leakage experienced - to provide a customized recommendation for which tampon absorbency to use next. 
