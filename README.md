@@ -9,7 +9,7 @@ It is not just another period calendar. The app gives a transformational experie
 
 ## History
 
-This project presented as a part of Lady Problems Hackathon - Boston 2016 on May 19-20, 2016
+This project presented as a part of Lady Problems Hackathon - A hackathon series addressing problems preventing female entrepreneurship held at Boston on May 19-20, 2016 at Kayak Technologies HQ, Cambridge
 
 ## Pitch:
 Contribute to your healthy and confident life style one selfie at a time,
