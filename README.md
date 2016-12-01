@@ -28,7 +28,7 @@ How?
 * Girls you are on fleek!
 
 ## Authors
-* Avanti Patil [LinkedIn Profile] ()
+* Avanti Patil [LinkedIn Profile] (https://www.linkedin.com/in/avantipatil)
 * Dhara Bhavsar [LinkedIn Profile] (https://www.linkedin.com/in/dharapbhavsar)
 * Priyanka B H [LinkedIn Profile] (https://www.linkedin.com/in/bhpriyanka)
 
